@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Drohne Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #1a1a2e;
+            font-family: Arial, sans-serif;
+        }
+        
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            z-index: 2000;
+        }
+        
+        model-viewer {
+            width: 100%;
+            height: 100vh;
+            background: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h3>🚁 3D Drohne</h3>
+        <p>Animation läuft automatisch</p>
+        <p>Maus: Drehen</p>
+        <p>Scroll: Zoomen</p>
+    </div>
+    
+    <div id="loading">
+        Drohne wird geladen...
+    </div>
+
+    <!-- Google Model Viewer - einfachste Lösung -->
+    <model-viewer 
+        src="./result.gltf" 
+        alt="3D Drohne"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+        environment-image="neutral"
+        exposure="1.2"
+        loading="eager"
+        animation-name="*"
+        autoplay>
+    </model-viewer>
+
+    <!-- Google Model Viewer Script -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    
+    <script>
+        // Loading Screen ausblenden wenn geladen
+        document.querySelector('model-viewer').addEventListener('load', function() {
+            document.getElementById('loading').style.display = 'none';
+            console.log('Drohne erfolgreich geladen!');
+            
+            // Animationen manuell starten falls nötig
+            const modelViewer = document.querySelector('model-viewer');
+            if (modelViewer.availableAnimations && modelViewer.availableAnimations.length > 0) {
+                console.log('Verfügbare Animationen:', modelViewer.availableAnimations);
+                modelViewer.availableAnimations.forEach(animationName => {
+                    modelViewer.play({ animationName: animationName, repetitions: Infinity });
+                });
+            }
+        });
+        
+        // Fehlerbehandlung
+        document.querySelector('model-viewer').addEventListener('error', function(event) {
+            console.error('Fehler beim Laden:', event);
+            document.getElementById('loading').innerHTML = 
+                '<div style="color: #ff6b6b;">❌ Fehler beim Laden der Drohne</div>';
+        });
+    </script>
+</body>
+</html>
