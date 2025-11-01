@@ -88,9 +88,10 @@ html{
 }
 
 body{
-  font-family: 'montserratlight', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
-  line-height: 1.65;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
   color: rgba(255,255,255,0.5);
   background-color: #272727;
 }
@@ -102,21 +103,21 @@ body{
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #c5a47e;
+  background: #ffb344;
 }
 
 ::selection{
-  background-color:#c5a47e;
+  background-color:#ffb344;
   color:#fff;
 }
 
 -webkit-::selection{
-    background-color:#c5a47e;
+    background-color:#ffb344;
     color:#fff;
 }
 
 ::-moz-selection{
-    background-color:#c5a47e;
+    background-color:#ffb344;
     color:#fff;
 }
 
@@ -144,42 +145,43 @@ body{
 
 h1,
 .h1{ 
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 8vmin;
   line-height: 1.2;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #fff;
 }
 
 h2,
 .h2{ 
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 2.1875em;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #fff;
 }
 
 h3,
 .h3{
-  font-family: 'montserratsemibold';
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.875em;
   line-height: 1.1;
-  font-weight: normal;
+  font-weight: 600;
   color:#fff;
+  letter-spacing: 0.1em;
 }
 
 h4,
 .h4{
-  font-family: 'montserratsemibold';
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.125em;
   line-height: 1.35;
-  font-weight: normal;
+  font-weight: 500;
   color:#fff;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -207,10 +209,13 @@ h4 a:hover,
 
 p{
   margin-bottom: 1.6em;
+  font-size: 1em;
+  line-height: 1.65;
 }
 
 b, strong{
   font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 ul{
@@ -219,7 +224,7 @@ ul{
 }
 
 a {
-  color:#c5a47e;
+  color:#ffb344;
   -webkit-transition: color .3s ease-out;
        -o-transition: color .3s ease-out;
           transition: color .3s ease-out;
@@ -227,7 +232,7 @@ a {
 
 a:hover,
 a:focus {
-  color:#c5a47e;
+  color:#ffb344;
   outline: none;
 }
 
@@ -265,7 +270,7 @@ textarea.form-control{
 }
 
 .form-control:focus{
-  border-color:#c5a47e;
+  border-color:#ffb344;
   outline: 0;
   -webkit-box-shadow:none;
           box-shadow:none;
@@ -285,7 +290,7 @@ textarea.form-control{
 }
 
 .form-control.error{
-  border-color:#c5a47e;
+  border-color:#ffb344;
 }
 
 .form-group{
@@ -311,7 +316,7 @@ label.error{
   font-family: 'montserratsemibold';
   position: relative;
   display: inline-block;
-  border:0.2em solid #c5a47e;
+  border:0.2em solid #ffb344;
   border-radius: 30px;
   padding:1.1em 2.2em 1.05em;
   font-size: 0.875em;
@@ -319,7 +324,7 @@ label.error{
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #c5a47e;
+  background-color: #ffb344;
   border:0;
   -webkit-transition: all .3s ease-out!important;
           transition: all .3s ease-out!important;
@@ -348,7 +353,7 @@ label.error{
 
 .btn-gray:hover{
 
-  background-color: #c5a47e;
+  background-color: #ffb344;
 }
 
 .btn-shadow-1{
@@ -429,7 +434,7 @@ label.error{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c5a47e;
+  background-color: #ffb344;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
           animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -511,7 +516,7 @@ label.error{
 }
 
 .text-primary{
-  color:#c5a47e;
+  color:#ffb344;
 }
 
 .page-lines{
@@ -562,6 +567,11 @@ label.error{
   text-align: center;
   margin:0;
   margin-left: 0.32em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.1875em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .fade-title-left,
@@ -778,7 +788,7 @@ label.error{
 }
 
 .social-list .fa:hover{
-  color:#c5a47e;
+  color:#ffb344;
   text-decoration: none;
 }
 
@@ -829,7 +839,7 @@ label.error{
 
 .navbar-desctop-menu li a:hover,
 .navbar-desctop-menu .active > a{
-  color:  #c5a47e;
+  color:  #ffb344;
 }
 
 .navbar-desctop-menu  > li{
@@ -915,7 +925,7 @@ label.error{
 
 .navbar-desctop.affix .navbar-desctop-menu li > a:hover,
 .navbar-desctop.affix .navbar-desctop-menu .active > a{
-  color:#c5a47e;
+  color:#ffb344;
 }
 
 
@@ -997,7 +1007,7 @@ label.error{
 }
 
 .navbar-nav-mobile > .current > a{
-  color: #c5a47e;
+  color: #ffb344;
 }
 
 .navbar-nav-mobile li a .fa-angle-down{
@@ -1017,7 +1027,7 @@ label.error{
 
 .navbar-nav-mobile > .active > a,
 .navbar-nav-mobile > .active > a:hover{
-  background-color: #c5a47e;
+  background-color: #ffb344;
   color: #fff;
   -webkit-transition: none;
   -o-transition: none;
@@ -1030,7 +1040,7 @@ label.error{
 
 .navbar-nav-mobile li a:hover,
 .navbar-nav-mobile li .active > a{
-  color: #c5a47e;
+  color: #ffb344;
 }
 
 
@@ -1052,7 +1062,7 @@ label.error{
 }
 
 .navbar-mobile.affix .navbar-toggle .icon-bar{
-  background-color:#c5a47e;
+  background-color:#ffb344;
 }
 
 
@@ -1115,6 +1125,9 @@ label.error{
   color: #fff;
   margin:0;
   margin-right: -0.32em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
 }
 
 
@@ -1211,9 +1224,10 @@ label.error{
 }
 
 .slide-title{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
-  letter-spacing: 0.32em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -1231,18 +1245,21 @@ label.error{
 
 
 .bg-about{
-  background: url(../img/bg/about.jpg) 50% 0 no-repeat;
+  background: url(../img/bg/über-uns.webp) 50% 0 no-repeat;
   background-size: cover;
 }
 
 .entry-title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 3.6em;
   margin:0 0 1em;
+  letter-spacing: 0.1em;
 }
 
 .entry-text{
-  font-size: 1.6em;
-  line-height: 1.6;
+  font-size: 1em;
+  line-height: 1.65;
 }
 
 .about .fade-title-left{
@@ -1282,6 +1299,16 @@ label.error{
   padding: 0 4.1em;
 }
 
+/* Nur für projects.html - weniger padding */
+.projects .col-service{
+  padding: 0 5px;
+}
+
+/* Für index.html Services (Leistungsportfolio) - mehr padding */
+.services-section .col-service{
+  padding: 0 1.5em;
+}
+
 .service-item{
   margin-bottom:2em; 
 }
@@ -1316,8 +1343,8 @@ label.error{
   position: absolute;
   width: 1em;
   height: 1em;
-  background-color: #e5bf93;
-  box-shadow:0  0  70px 8px rgba(197,164,126,0.75);
+  background-color: #ffb344;
+  box-shadow:0  0  70px 8px rgba(255, 179, 68, 0.75);
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: all 0.5s;
@@ -1371,7 +1398,7 @@ label.error{
   font-weight: normal;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color:#c5a47e;
+  color:#ffb344;
   padding: 0 0 1em;
   border-bottom:1px solid rgba(249,249,249,0.2);
   margin: 0 0 .5em;
@@ -1404,7 +1431,7 @@ label.error{
 
 .bg-projects{
   position: relative;
-  background:url(../img/bg/projects.jpg) 50% 0 no-repeat;
+  background:url(../img/bg/leistungsportfolio-statikbüro24.webp) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -1450,7 +1477,7 @@ label.error{
   top:0;
   right:0;
   bottom:0;
-  margin: 3.2em 3.6em;
+  margin: 3.2em 0.6em;
 }
 
 .project-title{
@@ -1458,7 +1485,7 @@ label.error{
   top:0;
   left:0;
   margin:0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 1.56em;
   line-height: 1.45;
@@ -1499,7 +1526,7 @@ label.error{
   height: 9em;
   margin:-4.5em;
   border-radius: 50%;
-  background-color: rgba(197,164,126,0.84);
+  background-color: rgba(255, 179, 68, 0.84);
   overflow: hidden;
   opacity: 0;
   -webkit-transform: scale(0.5);
@@ -1553,6 +1580,15 @@ label.error{
   transform:scale(1);
 }
 
+.service-in-projects {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+  height: 490px;
+}
+
+.hello {
+  height: 490px;
+}
 
 
 /* 5.1 Carousel */
@@ -1757,7 +1793,7 @@ img.mfp-img{
 }
 
 .project-details-info{
-  background-color: #c5a47e;
+  background-color: #ffb344;
   padding: 4.8em 3.1em 4.8em;
   color:#fff;
 }
@@ -1951,17 +1987,18 @@ img.mfp-img{
 }
 
 .blog-tags a:hover{
-  background-color:#c5a47e;
+  background-color:#ffb344;
   text-decoration: none;
   color: #fff;
 }
 
 .blog-title{
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 1.5em;
   line-height: 1.333;
   margin: 1.8em 0 0.8em;
+  letter-spacing: 0.05em;
 }
 
 .blog-info p{
@@ -1987,7 +2024,7 @@ img.mfp-img{
 
 .blog-meta .author a:hover{
   text-decoration: none;
-  color:#c5a47e;
+  color:#ffb344;
 }
 
 .blog-meta .time{
@@ -2143,7 +2180,7 @@ img.mfp-img{
 
 
 .bg-contacts{
-  background: url(../img/bg/contacts.jpg) 50% 0 no-repeat;
+  background: url(../img/bg/kontakt-architekturbüro.webp) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -2166,9 +2203,13 @@ img.mfp-img{
 }
 
 .col-address{
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 2.1;
   margin-top: 2em;
+}
+
+.col-address h4{
+  margin-bottom: 1em;
 }
 
 .form-submit{
@@ -2227,7 +2268,7 @@ img.mfp-img{
   margin: 0.35em 0.6em 0 0;
   width: 1.1em;
   text-align: center;
-  color: #c5a47e;
+  color: #ffb344;
   font-size: 1.2em;
 }
 
@@ -2240,19 +2281,18 @@ img.mfp-img{
 .contact-info{
   color:#fff;
   padding:0;
-  background:url(../img/bg/contact-details.jpg) 50% no-repeat;
-  background-size: cover;
+  background: transparent;
 }
 
 .contact-info-content{
   padding: 5.5em 5.6em;
-  background-color:rgba(197,164,125, 0.95);
+  background-color:rgba(255, 179, 68, 0.75);
 }
 
 .contact-info-title{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 80px;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color:#fff;
   opacity: 0.1;
@@ -2280,6 +2320,9 @@ img.mfp-img{
 .contact-row h4{
   margin:0 0 0.8em;
   color:#fff;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
 }
 
 .contact-row .fa{
@@ -2294,16 +2337,22 @@ img.mfp-img{
 
 .contact-body{
   padding-left: 2.6em;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-size: 1em;
 }
 
 .contact-content{
-  font-size: 1.3em;
+  font-size: 1em;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
 
 .phone-row{
-  font-size: 1.3em;
+  font-size: 1em;
   letter-spacing: 0.2em;
   margin-top: 0.5em;
+  line-height: 1.8;
 }
 
 
@@ -2324,6 +2373,45 @@ img.mfp-img{
 .footer .brand{
   margin-top: -0.45em;
   font-size: 3.4em;
+}
+
+/* Footer Links Design */
+.footer-links-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  align-items: flex-end;
+}
+
+.footer-copyright{
+  margin: 0;
+  font-size: 1em;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+.footer-links{
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.footer-link{
+  color: var(--text-light);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  font-size: 1em;
+}
+
+.footer-link:hover{
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.footer-separator{
+  color: var(--text-light);
+  opacity: 0.3;
 }
 
 .author-link{

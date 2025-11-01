@@ -1,4 +1,4 @@
-var mapLocation = new google.maps.LatLng(-37.823534, 144.975617); //change coordinates here
+var mapLocation = new google.maps.LatLng(52.433682, 13.532269); //Franz-Ehrlich-Straße 12, 12489 Berlin
 var marker;
 var map;
 
@@ -183,8 +183,8 @@ function initialize() {
     //change address details here
     var contentString = '<div class="map-info">' 
     + '<div class="map-title">' 
-    + '<h3>go<span class="text-primary">.</span>arch</h3></div>' 
-    + '<div class="map-address-row"><i class="fa fa-map-marker"></i><span class="text">USA, New York<br> 648 Ivah Street Apt. 375</span></div><div class="map-address-row"><i class="fa fa-phone"></i><span class="text">+0 543 554 44-25</span></div><div class="map-address-row"><span class="map-email"><i class="fa fa-envelope"></i><span class="text">go.arch@mail.com</span></span>' 
+    + '<h3>Statikbüro<span class="text-primary">24</span></h3></div>' 
+    + '<div class="map-address-row"><i class="fa fa-map-marker"></i><span class="text">Franz-Ehrlich-Straße 12<br>12489 Berlin</span></div><div class="map-address-row"><i class="fa fa-phone"></i><span class="text">+49 (0) 151 685 135 53</span></div><div class="map-address-row"><span class="map-email"><i class="fa fa-envelope"></i><span class="text">info@statikbuero-24.de</span></span>' 
     + '</div>';
     
     
@@ -196,7 +196,7 @@ function initialize() {
     marker = new google.maps.Marker({
         map: map,
         draggable: true,
-        title: 'Go.arch', //change title here
+        title: 'Statikbüro24', //change title here
         animation: google.maps.Animation.DROP,
         position: mapLocation
     });

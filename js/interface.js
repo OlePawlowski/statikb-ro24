@@ -263,6 +263,7 @@
 		items:4,
 		pagination:false,
 		navigation:true,
+		navigationText: ["Zurück", "Weiter"],
 		slideSpeed:700,
 		responsiveRefreshRate:0
 	});

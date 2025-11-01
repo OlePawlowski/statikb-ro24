@@ -52,7 +52,7 @@
     <header id="top" class="header-inner">
       <div class="brand-panel">
         <a href="index.html" class="brand">
-          Statikbüro<span class="text-primary">24</span>
+          <img style="width: 120px;" src="img/colored-logo.png">
         </a>
         <div class="brand-name">Statikbüro Berlin</div>
       </div>
@@ -185,7 +185,16 @@
 
       <section class="contact-details">
         <div class="col-map col-md-7">
-          <div id="map" class="gmap col-md-7"></div>
+          <iframe 
+            src="https://www.google.com/maps?q=Franz-Ehrlich-Straße+12,+12489+Berlin&output=embed&zoom=16" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="gmap col-md-7">
+          </iframe>
         </div>
         <div class="contact-info col-md-5 col-md-offset-7">
           <div class="contact-info-content">
@@ -216,110 +225,7 @@
         </div>
       </section>
 
-      <!-- Objects -->
 
-      <section id="objects" class="objects section">
-        <div class="container">
-          <header class="section-header">
-            <h2 class="section-title">We are <span class="text-primary">worldwide</span></h2>
-          </header>
-          <div class="section-content">
-            <div class="objects">
-              <img alt="" class="img-responsive" src="img/map.png">
-
-              <!-- Objects -->
-
-              <div class="object-label" style="left:12.6%; top:42%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 25.7%; top: 39.1%;">
-                <div class="object-info in">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 32.2%; top: 80.6%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-              
-              <div class="object-label" style="left: 47.3%; top: 34.5%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 50.7%; top: 20.4%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 64.4%; top: 22.4%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 82.2%; top: 32.6%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 84.4%; top: 82.3%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Contacts -->
 
@@ -389,12 +295,19 @@
               </a>
             </div>
             <div class="text-center-md col-base col-md-4">
-              <a href="#" class="author-link">
-                Konzept & Design: iSpod-Webagentur
+              <a href="https://visionwerk.agency/" class="author-link">
+                Konzept & Design: VisionWerk.agency
               </a>
             </div>
             <div class="text-right-md col-base col-md-4">
-              © 2025 Statikbüro24. All rights reserved. <a href="#">AGB</a> <a href="#">Impressum</a> <a href="#">Datenschutz</a>
+              <div class="footer-links-wrapper">
+                <p class="footer-copyright">© 2025 Statikbüro24. All rights reserved.</p>
+                <div class="footer-links">
+                  <a href="impressum.html" class="footer-link">Impressum</a>
+                  <span class="footer-separator">|</span>
+                  <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -430,7 +343,6 @@
 <script src="js/jquery.magnific-popup.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/interface.js"></script> 
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyCEprRgdAfS753As69Wak04p2fvCzKbXQU"></script>
-<script src="js/gmap.js"></script> 
+<!-- Google Maps als Embed ohne API-Key --> 
 </body>
 </html>

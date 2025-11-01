@@ -199,13 +199,122 @@
                 </div>
               </div>
               <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/tragwerksplanung-bauantrag.jpg">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+    
+      <style>
+        .entry-title {
+          font-size:2.6em !important;
+        }
+        .section-title {
+          font-size: 2.9em !important;
+        }
+        .entry-text {
+          margin-bottom: 0.6em !important;
+        }
+        #tragwerksplanung .row-base,
+        #standsicherheitsnachweis .row-base,
+        #bauantrag .row-base,
+        #bewehrungsplan .row-base,
+        #brandschutznachweis .row-base,
+        #schallschutznachweis .row-base,
+        #wärmeschutznachweis .row-base,
+        #energieausweis .row-base {
+          display: flex;
+          align-items: center;
+        }
+        
+        /* Image Overlay für Sections - Hochwertiges Overlay */
+        .about.section .col-base {
+          position: relative;
+        }
+        
+        .image-overlay-wrapper {
+          position: relative;
+          display: block;
+          width: 100%;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        
+        .image-overlay-wrapper::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.25) 100%);
+          pointer-events: none;
+          z-index: 1;
+          border-radius: 8px;
+        }
+        
+        .about.section .col-base img.img-responsive {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          filter: brightness(0.92) contrast(1.08);
+          transition: filter 0.3s ease;
+        }
+        
+        /* Scroll-Margin für Sections, damit Überschriften nicht hinter Navbar verschwinden */
+        section[id] {
+          scroll-margin-top: 200px;
+        }
+        
+        /* Verhindert weiteres Scrollen unter dem Footer */
+        html, body {
+          overflow-x: hidden;
+        }
+        
+        .layout {
+          overflow-x: hidden;
+        }
+        
+        .footer {
+          margin-bottom: 0 !important;
+          padding-bottom: 2em;
+          position: relative;
+        }
+        
+        .page-lines {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+        
+        /* Entfernt überschüssigen Abstand nach dem Footer */
+        .content {
+          padding-bottom: 0 !important;
+          margin-bottom: 0 !important;
+        }
+        
+        /* Sicherstellen, dass nach dem Footer kein zusätzlicher Platz ist */
+        .layout > .content:last-child,
+        .layout > .content + .page-lines {
+          margin-bottom: 0 !important;
+        }
+        
+        /* Verhindert Scrolling über den Footer hinaus */
+        .footer::after {
+          content: '';
+          display: block;
+          height: 0;
+          visibility: hidden;
+        }
+        
+        /* Setzt maximale Höhe des Body auf den tatsächlichen Inhalt */
+        body {
+          position: relative;
+        }
+      </style>
       <!-- Enhanced Services Details -->
 
       <section class="services section scroll-animate">
@@ -216,65 +325,59 @@
           </header>
           <div class="section-content">
             <div class="row-services row-base row">
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-architecture.png">
                   </div>
                   <h4 class="service-title-enhanced">Statische Berechnung</h4>
                   <p class="service-description-enhanced">Unsere statischen Berechnungen gewährleisten die umfassende Sicherheit der Tragkonstruktion und bieten eine solide Grundlage für Ihr Bauvorhaben.</p>
-                  <a href="#tragwerksplanung" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-interiors.png">
                   </div>
                   <h4 class="service-title-enhanced">Tragwerksoptimierung</h4>
                   <p class="service-description-enhanced">Bei bestehenden Tragwerken analysieren wir die Nutzungsfähigkeit anhand der einwirkenden Kräfte, Spannungen und Verformungen. Anschließend optimieren wir die Konstruktion durch gezielte Materialergänzungen oder -umverteilungen.</p>
-                  <a href="#tragwerksplanung" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
               <div class="clearfix visible-sm"></div>
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-planing.png">
                   </div>
                   <h4 class="service-title-enhanced">FE-Modelle</h4>
                   <p class="service-description-enhanced">Die Finite-Elemente-Methode ist ein bewährtes Verfahren zur Analyse von Stab- und Flächentragwerken, das präzise Ergebnisse liefert und die Planung unterstützt.</p>
-                  <a href="#tragwerksplanung" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-architecture.png">
                   </div>
                   <h4 class="service-title-enhanced">Positionspläne</h4>
                   <p class="service-description-enhanced">Der Positionsplan liefert eine präzise Übersicht über die exakte Lage der berechneten Bauteile und unterstützt somit eine effiziente Umsetzung Ihres Bauvorhabens.</p>
-                  <a href="#bewehrungsplan" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="1.2s">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="1.2s">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-interiors.png">
                   </div>
                   <h4 class="service-title-enhanced">Mengenermittlung</h4>
                   <p class="service-description-enhanced">Statikbüro24 setzt bei der Tragwerksplanung auf eine modellbasierte Mengenermittlung unter Verwendung von Building Information Modeling (BIM).</p>
-                  <a href="#tragwerksplanung" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
-              <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="1.5s">
-                <div class="service-card-enhanced">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="1.5s">
+                <div class="service-card-enhanced hello">
                   <div class="service-icon-enhanced">
                     <img alt="" src="img/img-icon/icon-planing.png">
                   </div>
                   <h4 class="service-title-enhanced">Tragwerksplanung im Bestand</h4>
                   <p class="service-description-enhanced">Bei der Sanierung oder Modernisierung bestehender Gebäude berücksichtigen wir die statischen Anforderungen und bieten Ihnen ein umfassendes Leistungspaket, das Ihnen Zeit, Geld und Aufwand spart.</p>
-                  <a href="#tragwerksplanung" class="service-link-enhanced">Mehr erfahren</a>
                 </div>
               </div>
             </div>
@@ -287,20 +390,65 @@
       <section id="standsicherheitsnachweis" class="about section">
         <div class="container">
           <header class="section-header">
-            <h2 class="section-title">Standsicherheitsnachweis</h2>
+            <h2 class="section-title">Standsicherheits<br>-nachweis</h2>
             <strong class="fade-title-left">standsicherheit</strong>
           </header>
           <div class="section-content">
             <div class="row-base row">
-              <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
-              </div>
               <div class="col-base col-sm-6 col-md-8">
                 <div class="entry">
-                  <h3 class="entry-title">Standsicherheitsnachweis für <span class="text-primary">Ihr Bauvorhaben</span></h3>
+                  <h3 class="entry-title">Für <span class="text-primary">Ihr Bauvorhaben</span></h3>
                   <p class="entry-text">Wir erstellen Ihnen einen umfassenden Standsicherheitsnachweis für Ihr Bauvorhaben und berücksichtigen alle entscheidenden Faktoren.</p>
                   <p class="entry-text">Mit modernster Software und qualifizierten Ingenieuren garantieren wir präzise Berechnungen und höchste Sicherheit!</p>
                   <p class="entry-text">Ein Standsicherheitsnachweis ist ein wichtiger Bestandteil des Bauantrags und dokumentiert die statische Sicherheit Ihres Bauvorhabens.</p>
+                </div>
+              </div>
+              <div class="col-base col-sm-6 col-md-4">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/standardsicherheitsnachweis.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Standsicherheitsnachweis -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Standsicherheitsnachweise</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Statische Berechnungen</h4>
+                  <p class="service-description-enhanced">Präzise Berechnungen nach höchsten Standards für die Standsicherheit Ihres Bauvorhabens.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Nachweisverfahren</h4>
+                  <p class="service-description-enhanced">Anwendung modernster Nachweisverfahren zur Sicherstellung der Standsicherheit nach aktuellen Normen.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Dokumentation</h4>
+                  <p class="service-description-enhanced">Umfassende Dokumentation aller statischen Berechnungen und Nachweise für Ihren Bauantrag.</p>
                 </div>
               </div>
             </div>
@@ -328,7 +476,52 @@
                 </div>
               </div>
               <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/bauantrag.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Bauantrag -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Bauanträge</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Antragsunterlagen</h4>
+                  <p class="service-description-enhanced">Zusammenstellung aller erforderlichen statischen Unterlagen für Ihren Bauantrag.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Beratung & Betreuung</h4>
+                  <p class="service-description-enhanced">Umfassende Beratung und professionelle Betreuung während des gesamten Antragsverfahrens.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Genehmigungsplanung</h4>
+                  <p class="service-description-enhanced">Professionelle Planung und Koordination für eine erfolgreiche Baugenehmigung.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -345,15 +538,60 @@
           </header>
           <div class="section-content">
             <div class="row-base row">
-              <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
-              </div>
               <div class="col-base col-sm-6 col-md-8">
                 <div class="entry">
                   <h3 class="entry-title">Professionelle <span class="text-primary">Bewehrungspläne</span></h3>
                   <p class="entry-text">Als professionelles Ingenieurbüro erstellen wir Bewehrungs- und Schalpläne für Ihre Bauprojekte.</p>
                   <p class="entry-text">Unser Leistungsspektrum umfasst zudem Positionspläne, Lasten- und Lastenabtragspläne sowie Konstruktionspläne im Stahlbau.</p>
                   <p class="entry-text">Detaillierte Bewehrungspläne sind essentiell für eine korrekte Umsetzung der statischen Berechnungen auf der Baustelle.</p>
+                </div>
+              </div>
+              <div class="col-base col-sm-6 col-md-4">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/bewehrungsplan.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Bewehrungsplan -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Bewehrungspläne</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Bewehrungspläne</h4>
+                  <p class="service-description-enhanced">Detaillierte Bewehrungs- und Schalpläne für eine präzise Umsetzung auf der Baustelle.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Positionspläne</h4>
+                  <p class="service-description-enhanced">Präzise Positionspläne zur exakten Darstellung der Bauteilpositionen.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Stahlbaupläne</h4>
+                  <p class="service-description-enhanced">Konstruktionspläne für Stahlbauteile nach aktuellen Normen und Standards.</p>
                 </div>
               </div>
             </div>
@@ -380,7 +618,52 @@
                 </div>
               </div>
               <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/brandschutznachweis.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Brandschutznachweis -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Brandschutznachweise</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Brandschutzkonzepte</h4>
+                  <p class="service-description-enhanced">Individuelle Brandschutzkonzepte für maximale Sicherheit Ihrer Gebäude.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Nachweisverfahren</h4>
+                  <p class="service-description-enhanced">Professionelle Brandschutznachweise nach aktuellen Vorschriften und Normen.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Beratung</h4>
+                  <p class="service-description-enhanced">Umfassende Brandschutzberatung für alle Arten von Bauvorhaben.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -397,15 +680,60 @@
           </header>
           <div class="section-content">
             <div class="row-base row">
-              <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
-              </div>
               <div class="col-base col-sm-6 col-md-8">
                 <div class="entry">
                   <h3 class="entry-title">Effektiver <span class="text-primary">Schallschutz</span></h3>
                   <p class="entry-text">Ein effektiver Schallschutz ist nicht nur häufig gesetzlich vorgeschrieben, sondern kann auch zukünftige Probleme bei Verkauf oder Vermietung vermeiden.</p>
                   <p class="entry-text">Daher ist ein gut durchdachtes Schallschutzkonzept für die meisten Bauvorhaben unerlässlich.</p>
                   <p class="entry-text">Wir entwickeln individuelle Schallschutzkonzepte, die den gesetzlichen Anforderungen entsprechen und gleichzeitig wirtschaftlich umsetzbar sind.</p>
+                </div>
+              </div>
+              <div class="col-base col-sm-6 col-md-4">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/schallschutznachweis.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Schallschutznachweis -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Schallschutznachweise</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Schallschutzkonzepte</h4>
+                  <p class="service-description-enhanced">Individuelle Schallschutzkonzepte für optimale Wohn- und Arbeitsqualität.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Berechnungen</h4>
+                  <p class="service-description-enhanced">Präzise Schallschutzberechnungen nach DIN 4109 und aktuellen Vorschriften.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Lösungsentwicklung</h4>
+                  <p class="service-description-enhanced">Wirtschaftliche und gesetzeskonforme Schallschutzlösungen für Ihr Projekt.</p>
                 </div>
               </div>
             </div>
@@ -432,7 +760,52 @@
                 </div>
               </div>
               <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/wärmeschutznachweis.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Wärmeschutznachweis -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Wärmeschutznachweise</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">GEG-Nachweis</h4>
+                  <p class="service-description-enhanced">Wärmeschutznachweise nach Gebäudeenergiegesetz (GEG) für Ihr Bauvorhaben.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Energieeffizienz</h4>
+                  <p class="service-description-enhanced">Optimierung der Energieeffizienz Ihres Gebäudes durch professionelle Planung.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Behördliche Anforderungen</h4>
+                  <p class="service-description-enhanced">Sicherstellung der Erfüllung aller behördlichen Anforderungen für eine reibungslose Genehmigung.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -449,15 +822,60 @@
           </header>
           <div class="section-content">
             <div class="row-base row">
-              <div class="col-base col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="img/380x370.jpg">
-              </div>
               <div class="col-base col-sm-6 col-md-8">
                 <div class="entry">
                   <h3 class="entry-title">Energieausweis für <span class="text-primary">Ihr Gebäude</span></h3>
                   <p class="entry-text">Wissen Sie, ob Ihr Gebäude effizient oder energieintensiv ist? Ein Energieausweis schafft Klarheit.</p>
                   <p class="entry-text">Wir unterstützen Sie bei der energetischen Bewertung gemäß dem Gebäudeenergiegesetz (GEG) und entwickeln individuelle Lösungen für die Ausstellung von Energieausweisen.</p>
                   <p class="entry-text">Ein Energieausweis ist nicht nur gesetzlich vorgeschrieben, sondern auch ein wichtiges Marketinginstrument für Verkauf oder Vermietung.</p>
+                </div>
+              </div>
+              <div class="col-base col-sm-6 col-md-4">
+                <div class="image-overlay-wrapper">
+                  <img alt="" class="img-responsive" src="img/bg/energieausweis.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Details - Energieausweis -->
+
+      <section class="services section scroll-animate">
+        <div class="container">
+          <header class="section-header-enhanced">
+            <h2 class="section-title-enhanced">Unsere <span class="text-primary">Leistungen</span></h2>
+            <p class="section-subtitle-enhanced">Detaillierte Übersicht über unser umfassendes Leistungsspektrum für Energieausweise</p>
+          </header>
+          <div class="section-content">
+            <div class="row-services row-base row">
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-architecture.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Energieausweis</h4>
+                  <p class="service-description-enhanced">Professionelle Ausstellung von Energieausweisen nach GEG für Verkauf und Vermietung.</p>
+                </div>
+              </div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-interiors.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Energetische Bewertung</h4>
+                  <p class="service-description-enhanced">Umfassende energetische Bewertung Ihres Gebäudes gemäß Gebäudeenergiegesetz.</p>
+                </div>
+              </div>
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base service-in-projects col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-card-enhanced hello">
+                  <div class="service-icon-enhanced">
+                    <img alt="" src="img/img-icon/icon-planing.png">
+                  </div>
+                  <h4 class="service-title-enhanced">Marketingunterstützung</h4>
+                  <p class="service-description-enhanced">Energieausweis als wichtiges Marketinginstrument für erfolgreichen Verkauf oder Vermietung.</p>
                 </div>
               </div>
             </div>
@@ -471,40 +889,40 @@
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">FAQ - <span class="text-primary">Häufig gestellte Fragen</span></h2>
-            <strong class="fade-title-right">faq</strong>
+            <strong class="fade-title-left">faq</strong>
           </header>
           <div class="section-content">
             <div class="row-base row">
               <div class="col-base col-md-12">
                 <div class="faq-list">
-                  <div class="faq-item">
-                    <h4 class="faq-question">Wann benötigt man einen Statiker?</h4>
-                    <div class="faq-answer">
-                      <p>Ein Statiker wird benötigt, wenn bauliche Maßnahmen die Tragfähigkeit oder Standsicherheit eines Gebäudes beeinträchtigen könnten. Dies ist bei Neubauten, Umbauten, Aufstockungen oder größeren Sanierungen der Fall.</p>
+                  <div class="faq-item-enhanced">
+                    <button class="faq-question-enhanced">Wann benötigt man einen Statiker?</button>
+                    <div class="faq-answer-enhanced">
+                      <p>Ein Statiker wird benötigt, wenn bauliche Maßnahmen die Tragfähigkeit oder Standsicherheit eines Gebäudes beeinträchtigen könnten. Dies ist bei Neubauten, Umbauten, Aufstockungen oder größeren Sanierungen der Fall. Wir beraten Sie gerne über die Notwendigkeit einer statischen Berechnung für Ihr spezifisches Bauvorhaben.</p>
                     </div>
                   </div>
-                  <div class="faq-item">
-                    <h4 class="faq-question">Was kostet ein Statiker?</h4>
-                    <div class="faq-answer">
-                      <p>Die Kosten für einen Statiker richten sich nach der Größe und Komplexität des Bauvorhabens. Wir bieten Ihnen innerhalb von 24 Stunden nach Ihrer Kontaktaufnahme ein unverbindliches Angebot.</p>
+                  <div class="faq-item-enhanced">
+                    <button class="faq-question-enhanced">Was kostet ein Statiker?</button>
+                    <div class="faq-answer-enhanced">
+                      <p>Die Kosten für einen Statiker richten sich nach der Größe und Komplexität des Bauvorhabens. Wir bieten Ihnen innerhalb von 24 Stunden nach Ihrer Kontaktaufnahme ein unverbindliches Angebot. Unsere Preise sind transparent und fair - ohne versteckte Kosten.</p>
                     </div>
                   </div>
-                  <div class="faq-item">
-                    <h4 class="faq-question">Welche Unterlagen benötigt ein Statiker?</h4>
-                    <div class="faq-answer">
-                      <p>Grundsätzlich benötigen wir Baupläne, Grundstücksdaten, Baugrundgutachten und Informationen über die geplante Nutzung. Bei einem ersten Gespräch klären wir gemeinsam, welche spezifischen Unterlagen für Ihr Projekt erforderlich sind.</p>
+                  <div class="faq-item-enhanced">
+                    <button class="faq-question-enhanced">Welche Unterlagen benötigt ein Statiker?</button>
+                    <div class="faq-answer-enhanced">
+                      <p>Grundsätzlich benötigen wir Baupläne, Grundstücksdaten, Baugrundgutachten und Informationen über die geplante Nutzung. Bei einem ersten Gespräch klären wir gemeinsam, welche spezifischen Unterlagen für Ihr Projekt erforderlich sind. Wir unterstützen Sie auch bei der Beschaffung fehlender Dokumente.</p>
                     </div>
                   </div>
-                  <div class="faq-item">
-                    <h4 class="faq-question">Was macht ein Statiker genau?</h4>
-                    <div class="faq-answer">
-                      <p>Ein Statiker plant und berechnet die tragenden Teile eines Gebäudes. Er erstellt statische Berechnungen, Standsicherheitsnachweise und Bewehrungspläne, um die Sicherheit und Stabilität des Bauwerks zu gewährleisten.</p>
+                  <div class="faq-item-enhanced">
+                    <button class="faq-question-enhanced">Was macht ein Statiker genau?</button>
+                    <div class="faq-answer-enhanced">
+                      <p>Ein Statiker plant und berechnet die tragenden Teile eines Gebäudes. Er erstellt statische Berechnungen, Standsicherheitsnachweise und Bewehrungspläne, um die Sicherheit und Stabilität des Bauwerks zu gewährleisten. Zusätzlich berät er bei der Materialauswahl und Konstruktionsoptimierung.</p>
                     </div>
                   </div>
-                  <div class="faq-item">
-                    <h4 class="faq-question">Wer darf Bauanträge einreichen?</h4>
-                    <div class="faq-answer">
-                      <p>Bauanträge können von Bauherren, Architekten oder Bauingenieuren eingereicht werden. Wir unterstützen Sie bei der Zusammenstellung aller erforderlichen Unterlagen für Ihren Bauantrag.</p>
+                  <div class="faq-item-enhanced">
+                    <button class="faq-question-enhanced">Wer darf Bauanträge einreichen?</button>
+                    <div class="faq-answer-enhanced">
+                      <p>Bauanträge können von Bauherren, Architekten oder Bauingenieuren eingereicht werden. Wir unterstützen Sie bei der Zusammenstellung aller erforderlichen Unterlagen für Ihren Bauantrag und begleiten Sie durch den gesamten Genehmigungsprozess.</p>
                     </div>
                   </div>
                 </div>
@@ -693,13 +1111,14 @@ $(document).ready(function() {
     $(this).next('.faq-answer-enhanced').toggleClass('active');
   });
   
-  // Smooth scrolling for anchor links
+  // Smooth scrolling for anchor links with proper offset for navbar
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
       event.preventDefault();
+      var offset = 200; // Offset für Navigation-Bar (erhöht für bessere Sichtbarkeit)
       $('html, body').stop().animate({
-        scrollTop: target.offset().top - 100
+        scrollTop: target.offset().top - offset
       }, 1000);
     }
   });
@@ -733,6 +1152,20 @@ $(document).ready(function() {
       $(this).find('.service-icon-enhanced').removeClass('pulse');
     }
   );
+  
+  // Verhindert Scrolling über den Footer hinaus
+  $(window).on('scroll', function() {
+    var footer = $('#footer');
+    if (footer.length) {
+      var footerBottom = footer.offset().top + footer.outerHeight();
+      var windowBottom = $(window).scrollTop() + $(window).height();
+      
+      // Wenn wir über den Footer hinaus scrollen, stoppen wir das Scrolling
+      if (windowBottom > footerBottom) {
+        $('html, body').scrollTop(footerBottom - $(window).height());
+      }
+    }
+  });
 });
 </script>
 
