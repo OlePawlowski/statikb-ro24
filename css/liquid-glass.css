@@ -1,0 +1,264 @@
+/* ===============================================
+   LIQUID GLASS / GLASSMORPHISM DESIGN
+   Moderne glasige Design-Effekte im DES.de Stil
+   =============================================== */
+
+/* Liquid Glass Basis-Effekt */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Verbesserte Navigation mit Glass-Effekt */
+.navbar-desctop.affix {
+  background: rgba(39, 39, 39, 0.8) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Cards mit subtilem Liquid Glass */
+.service-item {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtiler Shine-Effekt nur bei Hover */
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.08), 
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-item:hover::before {
+  left: 100%;
+}
+
+/* Glass-Effekt verbessert den bestehenden Hover, überschreibt nicht komplett */
+.service-item:hover {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Sicherstellen dass Content über Shine ist */
+.service-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Project Cards - nur Border-Radius verbessern, kein Glass auf Overlay */
+/* Glass-Effekt nur auf den Projekt-Container selbst */
+.project {
+  border-radius: 12px;
+}
+
+/* Keine Glass-Effekte auf figure::before - bestehende Overlays beibehalten */
+/* figcaption Overlay beibehalten ohne Glass */
+
+/* Brand Panel mit subtilem Glass-Effekt */
+.brand-panel {
+  background: rgba(43, 43, 43, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* FAQ Items mit subtilem Glass */
+.faq-item-enhanced {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.faq-item-enhanced:hover {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Contact Section mit Glass-Effekt */
+.contact-enhanced {
+  position: relative;
+}
+
+.contact-enhanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255, 179, 68, 0.1) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 80%,
+    rgba(255, 179, 68, 0.08) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-enhanced > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Blog Cards mit subtilem Glass */
+.blog {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.blog:hover {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Client/Partner Cards mit subtilem Glass - nur wenn Grid-Style aktiv */
+@media (max-width: 991px) {
+  .clients-list .client {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .clients-list .client:hover {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* Mobile Navigation mit Glass */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(43, 43, 43, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-mobile.affix {
+    background: rgba(39, 39, 39, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Footer - kein Glass-Effekt, bestehende Styles beibehalten */
+
+/* Section Header mit subtilem Glow */
+.section-header {
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 179, 68, 0.5),
+    transparent
+  );
+  filter: blur(3px);
+  opacity: 0.8;
+}
+
+/* Floating Glass Elements Animation */
+@keyframes float-glass {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.5;
+  }
+}
+
+.glass-float {
+  animation: float-glass 6s ease-in-out infinite;
+}
+
+/* Hero Section - keine Überschreibung, bestehende Gradient-Overlays beibehalten */
+/* main-inner::before wird nicht überschrieben, um bestehende Styles zu erhalten */
+
+/* Vertical Panel mit subtilem Glass */
+.vertical-panel {
+  background: rgba(43, 43, 43, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Slide Number - kein Glass, bleibt wie es ist */
+
+/* Header Phone - kein Glass, bleibt wie es ist */
+
+/* Project Details - keine Glass-Überschreibung, bestehende Styles beibehalten */
+
+/* Contact Info Card - keine Glass-Überschreibung, bestehende Styles beibehalten */
+
+/* Map Info - keine Glass-Überschreibung, bestehende Styles beibehalten */
+
+/* Object Info - keine Glass-Überschreibung, bestehende Styles beibehalten */
+
+/* Blog Tags - keine Glass-Effekte, bestehende Styles beibehalten */
+
+/* Responsive Glass Adjustments */
+@media (max-width: 768px) {
+  .liquid-glass,
+  .service-item,
+  .faq-item-enhanced {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Reduzierte Blur auf Mobile für Performance */
+  .navbar-desctop.affix,
+  .brand-panel,
+  .vertical-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Mobile Glass-Effekte optimiert */
+  .service-item,
+  .faq-item-enhanced,
+  .blog {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+

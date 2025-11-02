@@ -83,17 +83,19 @@
 
 
 html{
-  font-size: 75%;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-  color: rgba(255,255,255,0.5);
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: rgba(255,255,255,0.85);
   background-color: #272727;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar{
@@ -125,64 +127,49 @@ body{
 
 /* 1.2 Typography */
 
-
-
-@font-face {
-  font-family: 'montserratlight';
-  src: url('../fonts/montserrat/Montserrat-Light.ttf');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'montserratsemibold';
-  src: url('../fonts/montserrat/Montserrat-SemiBold.ttf');
-  font-weight: normal;
-  font-style: normal;
-
-}
+/* Moderne, einheitliche Schriftarten - Inter für Fließtext, Space Grotesk für Überschriften */
 
 h1,
 .h1{ 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 8vmin;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
   line-height: 1.2;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: #fff;
 }
 
 h2,
 .h2{ 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 2.1875em;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
   color: #fff;
 }
 
 h3,
 .h3{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.875em;
-  line-height: 1.1;
-  font-weight: 600;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 400;
   color:#fff;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 }
 
 h4,
 .h4{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.125em;
-  line-height: 1.35;
-  font-weight: 500;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
   color:#fff;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 h1 a,
@@ -208,13 +195,14 @@ h4 a:hover,
 }
 
 p{
-  margin-bottom: 1.6em;
-  font-size: 1em;
-  line-height: 1.65;
+  margin-bottom: 1.5em;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
 }
 
 b, strong{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 600;
 }
 
@@ -254,26 +242,26 @@ textarea.form-control{
   padding-left: 22px;
   color: #fff;
   background-color: #323232;
-  border:1px solid #323232;
-  -webkit-box-shadow:none;
-          box-shadow:none;
-      -webkit-appearance: none;
+  border: 1px solid #323232;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
   -webkit-transition: all .15s;
-       -o-transition: all .15s;
-          transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
 }
 
 textarea.form-control{
   height: 7.9em;
-  padding-top:1.1em;
-  resize:none;
+  padding-top: 1.1em;
+  resize: none;
 }
 
 .form-control:focus{
-  border-color:#ffb344;
+  border-color: #ffb344;
   outline: 0;
-  -webkit-box-shadow:none;
-          box-shadow:none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .form-control::-moz-placeholder {
@@ -313,31 +301,65 @@ label.error{
 
 
 .btn{
-  font-family: 'montserratsemibold';
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
   position: relative;
   display: inline-block;
-  border:0.2em solid #ffb344;
-  border-radius: 30px;
-  padding:1.1em 2.2em 1.05em;
-  font-size: 0.875em;
-  color:#fff;
+  border: 1px solid rgba(255, 179, 68, 0.3);
+  border-radius: 0;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffb344 !important;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #ffb344;
-  border:0;
-  -webkit-transition: all .3s ease-out!important;
-          transition: all .3s ease-out!important;
+  background: rgba(255, 179, 68, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(255, 179, 68, 0.3), 0 0 20px rgba(255, 179, 68, 0.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 179, 68, 0.4);
+  overflow: hidden;
+  animation: pulseGlowBtn 2s ease-in-out infinite;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 179, 68, 0.3), transparent);
+  transition: left 0.6s ease;
 }
 
 .btn:hover,
 .btn:focus{
-  color: #fff;
-  background-color: #323232;
-  -webkit-box-shadow:none;
-  box-shadow: none;
-  outline: none!important;
+  color: #fff !important;
+  transform: translateY(-3px);
+  border-color: rgba(255, 179, 68, 0.6);
+  background: rgba(255, 179, 68, 0.15);
+  box-shadow: 0 4px 20px rgba(255, 179, 68, 0.4), 0 0 30px rgba(255, 179, 68, 0.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 179, 68, 0.7);
+  animation: none;
+  outline: none;
 }
+
+.btn:hover::before,
+.btn:focus::before {
+  left: 100%;
+}
+
+@keyframes pulseGlowBtn {
+  0%, 100% {
+    box-shadow: 0 2px 10px rgba(255, 179, 68, 0.3), 0 0 20px rgba(255, 179, 68, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 179, 68, 0.5), 0 0 30px rgba(255, 179, 68, 0.3);
+  }
+}
+
+/* Button hover bereits oben definiert */
 
 .btn .icon-next{
   position: relative;
@@ -347,21 +369,24 @@ label.error{
 }
 
 .btn-gray{
-  background-color: #323232;
-  border-color: #323232;
+  background: rgba(50, 50, 50, 0.08);
+  backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff !important;
 }
 
 .btn-gray:hover{
-
-  background-color: #ffb344;
+  background: rgba(255, 179, 68, 0.15);
+  border-color: rgba(255, 179, 68, 0.6);
+  color: #fff !important;
 }
 
 .btn-shadow-1{
-  box-shadow:0 15px 34px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 10px rgba(255, 179, 68, 0.3), 0 0 20px rgba(255, 179, 68, 0.1);
 }
 
 .btn-shadow-2{
-  box-shadow:0 15px 34px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 10px rgba(255, 179, 68, 0.3), 0 0 20px rgba(255, 179, 68, 0.1);
 }
 
 
@@ -555,8 +580,23 @@ label.error{
 
 .section{
   position: relative;
-  margin-top: 7.1em;
-  margin-bottom: 7.1em;
+  margin-top: 120px;
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
+.section:first-of-type {
+  margin-top: 0;
+}
+
+/* FAQ und About Sections ohne margin-bottom */
+.section.faq,
+.section.about,
+.faq.section,
+.about.section,
+.faq-enhanced,
+.faq-enhanced.section {
+  margin-bottom: 0;
 }
 
 .section-header{
@@ -565,18 +605,19 @@ label.error{
 
 .section-title{
   text-align: center;
-  margin:0;
-  margin-left: 0.32em;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 2.1875em;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.3;
+  color: #fff;
 }
 
 .fade-title-left,
 .fade-title-right{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 10.8em;
   line-height: 1;
@@ -596,7 +637,7 @@ label.error{
 }
 
 .section-content{
-  margin-top: 7.1em;
+  margin-top: 60px;
 }
 
 
@@ -635,7 +676,7 @@ label.error{
 
 .brand{
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size:4vmin;
   line-height: 1;
@@ -653,7 +694,7 @@ label.error{
   z-index: -1;
   bottom: -0.4em;
   right:-0.38em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 8.75em;
   line-height: 1;
@@ -662,7 +703,7 @@ label.error{
 }
 
 .slide-number{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   margin-top: 8vmin;
 }
 
@@ -689,28 +730,24 @@ label.error{
 }
 
 .header-phone{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 300;
   font-size: 0.81em;
   letter-spacing: 0.32em;
-  position: absolute;
-  z-index: 3;
-  color: #fff;
-  left: 50vmin;
-  top:5.9vmin;
+  position: fixed;
+  z-index: 102;
+  color: #ffb344;
+  right: 130px; /* Rechts neben dem Hamburger-Menü (70px + 60px Abstand) */
+  top: 53px; /* Vertikal zentriert mit Hamburger (40px + (70px/2) - (line-height/2)) */
+  line-height: 1.5;
+  padding: 0;
 }
 
- @media (max-width: 480px){
+@media (max-width: 991px) {
   .header-phone{
     display: none;
   }
- }
-
-  @media (min-width: 992px) and (max-width: 1200px){
-  .header-phone{
-    display: none;
-  }
- }
+}
 
 
 
@@ -752,7 +789,8 @@ label.error{
 }
 
 .vertical-panel-title{
-  font-family: 'montserratsemibold';
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 10px;
   white-space: nowrap;
   text-transform: uppercase;
@@ -798,6 +836,593 @@ label.error{
 
 
 
+/* Hamburger Menu Toggle - Modernes dreistrich-Icon wird zu X */
+.hamburger-menu-toggle {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 101;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.hamburger-line {
+  height: 4px;
+  background-color: #ffb344;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  transform-origin: center;
+  position: relative;
+  margin-left: auto; /* Stellt sicher, dass alle Linien rechts ausgerichtet sind */
+}
+
+/* Obere Linie - Standard, rechts ausgerichtet */
+.hamburger-line:nth-child(1) {
+  width: 48px;
+  margin-top: 0;
+}
+
+/* Mittlere Linie - Standard, rechts ausgerichtet */
+.hamburger-line:nth-child(2) {
+  width: 48px;
+  margin-top: 9px;
+}
+
+/* Untere Linie - Kleiner, rechts ausgerichtet */
+.hamburger-line:nth-child(3) {
+  width: 32px; /* Kleiner als die anderen, aber rechts ausgerichtet */
+  margin-top: 9px;
+}
+
+.hamburger-menu-toggle:hover .hamburger-line {
+  background-color: #ffb344;
+  box-shadow: 0 0 12px rgba(255, 179, 68, 0.6);
+}
+
+.hamburger-menu-toggle:hover .hamburger-line:nth-child(3) {
+  width: 38px; /* Wird beim Hover etwas länger */
+  transition: width 0.3s ease;
+}
+
+/* Animation zu X - Verbessertes perfektes Kreuz */
+.hamburger-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: #ffb344;
+  width: 48px;
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -2px;
+}
+
+/* Mittlere Linie wird unsichtbar */
+.hamburger-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+  margin-top: 0;
+}
+
+/* Untere Linie rotiert nach oben - perfektes X */
+.hamburger-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #ffb344;
+  width: 48px;
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -2px;
+}
+
+@media (max-width: 991px) {
+  .hamburger-menu-toggle {
+    display: flex !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+  }
+}
+
+/* DES.de Style Navigation */
+.navbar-desctop-des {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(39, 39, 39, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-desctop-des.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Body lock when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .navbar-mobile {
+    display: flex !important;
+    z-index: 1003 !important;
+    position: fixed !important;
+  }
+  
+  /* Desktop Header Elemente auf Mobile ausblenden */
+  .brand-panel,
+  .header-phone,
+  .vertical-panel,
+  .vertical-panel-content {
+    display: none !important;
+  }
+  
+  /* Alle Hamburger-Menüs standardmäßig ausblenden */
+  .hamburger-menu-toggle {
+    display: none !important;
+  }
+  
+  /* Nur das Hamburger-Menü in navbar-mobile anzeigen */
+  .navbar-mobile .hamburger-menu-toggle {
+    display: flex !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    z-index: 1002 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+  
+  /* Hamburger-Menü Button klickbar machen */
+  .navbar-mobile .hamburger-menu-toggle,
+  .navbar-mobile .hamburger-menu-toggle * {
+    pointer-events: auto !important;
+  }
+  
+  /* Mobile Menu Layout Anpassungen */
+  .navbar-desctop-des {
+    background: rgba(39, 39, 39, 0.98) !important;
+    pointer-events: auto !important;
+    z-index: 1001 !important;
+  }
+  
+  /* Alle Menüelemente klickbar machen */
+  .nav-menu-center,
+  .nav-menu-vertical,
+  .nav-item,
+  .nav-item-large,
+  .nav-item a,
+  .nav-item-large a,
+  .nav-submenu,
+  .nav-submenu li a,
+  .nav-vertical-left,
+  .nav-vertical-left a,
+  .nav-language-center,
+  .nav-social-bottom-right,
+  .nav-social-bottom-right a {
+    pointer-events: auto !important;
+  }
+  
+  /* Section Abstände auf Mobile gleichmäßig 120px */
+  .section {
+    margin-top: 120px !important;
+    margin-bottom: 0 !important;
+    padding: 0 15px !important;
+  }
+  
+  /* Erste Section sollte kein Top-Margin haben */
+  .section:first-of-type {
+    margin-top: 0 !important;
+  }
+  
+  /* FAQ und About Sections ohne margin-bottom auf Mobile */
+  .section.faq,
+  .section.about,
+  .faq.section,
+  .about.section,
+  .faq-enhanced,
+  .faq-enhanced.section {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Hauptnavigation links */
+  .nav-menu-center {
+    position: absolute !important;
+    left: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    text-align: left !important;
+    z-index: 1004 !important;
+    pointer-events: auto !important;
+  }
+  
+  .nav-menu-vertical {
+    align-items: flex-start !important;
+    gap: 24px !important;
+    pointer-events: auto !important;
+  }
+  
+  .nav-item-large,
+  .nav-item {
+    font-size: 18px !important;
+    text-align: left !important;
+  }
+  
+  .nav-item-large a {
+    font-size: 22px !important;
+  }
+  
+  .nav-item a {
+    font-size: 18px !important;
+  }
+  
+  .nav-item-large a,
+  .nav-item a {
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+  
+  /* Abstand für Untermenü auf Mobile anpassen */
+  .nav-item.has-submenu .nav-submenu {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Nur wenn das Untermenü sichtbar ist, Margin hinzufügen */
+  .nav-item.has-submenu:hover .nav-submenu,
+  .nav-item.has-submenu.active .nav-submenu {
+    margin-top: 12px !important;
+  }
+  
+  .nav-item.has-submenu {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Vertikale Texte rechts */
+  .nav-vertical-left {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    transform-origin: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-end !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+  
+  .nav-vertical-left a,
+  .nav-vertical-left .vertical-text {
+    pointer-events: auto !important;
+  }
+  
+  .vertical-text {
+    writing-mode: vertical-rl !important;
+    text-orientation: mixed !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    transform: rotate(180deg) !important;
+  }
+  
+  /* Copyright ausblenden auf Mobile */
+  .nav-vertical-left .vertical-text:last-child {
+    display: none !important;
+  }
+  
+  /* Sprache Selector unten links */
+  .nav-language-center {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    font-size: 14px !important;
+    transform: translateX(0) !important;
+  }
+  
+  /* Social Media Icons unten rechts */
+  .nav-social-bottom-right {
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+  }
+  
+  .nav-social-bottom-right .social-icon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+  }
+  
+  /* Logo oben rechts ausblenden auf Mobile */
+  .nav-logo-top-right {
+    display: none !important;
+  }
+  
+  /* === MOBILE: Elemente ausblenden === */
+  .project-list-enhanced {
+    display: none !important;
+  }
+  
+  img[src="img/bg/380x370.jpg"],
+  img.img-responsive[src="img/bg/380x370.jpg"] {
+    display: none !important;
+  }
+  
+  .experience.section {
+    display: none !important;
+  }
+  
+  /* === MOBILE: FAQ List Padding === */
+  .faq-list {
+    padding: 0 !important;
+  }
+}
+
+/* Logo oben rechts - wird im aufgeklappten Zustand ausgeblendet */
+.nav-logo-top-right {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-desctop-des.active .nav-logo-top-right {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.brand-des {
+  font-family: 'Trasandina', 'Inter', sans-serif;
+  font-size: 1.2em;
+  color: #ffb344; /* Koralle */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-des .text-primary {
+  color: #ffb344;
+}
+
+/* Zentrales vertikales Menü */
+.nav-menu-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.nav-menu-vertical {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-item,
+.nav-item-large {
+  position: relative;
+}
+
+.nav-item a,
+.nav-item-large a {
+  font-family: 'neueMachina', 'Neue Machina', monospace;
+  font-size: 1.8em;
+  font-weight: 400;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffb344; /* Koralle Outline */
+  text-decoration: none;
+  display: block;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.nav-item-large a {
+  font-size: 2.4em;
+}
+
+/* Hover-Effekt: Menüpunkte füllen sich mit Farbe */
+.nav-item a:hover,
+.nav-item-large a:hover {
+  -webkit-text-stroke: 1px #ffb344;
+  color: #ffb344; /* Füllung mit Koralle */
+  text-shadow: 0 0 20px rgba(255, 179, 68, 0.4);
+  transform: scale(1.05);
+}
+
+/* Aktives Item in Koralle */
+.nav-item.active a {
+  color: #ffb344; /* solides Koralle */
+  -webkit-text-stroke: 0;
+  font-weight: 400;
+  text-shadow: 0 0 20px rgba(255, 179, 68, 0.5);
+}
+
+/* Untermenü für Leistungsportfolio */
+.nav-item.has-submenu {
+  position: relative;
+}
+
+.nav-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-item.has-submenu:hover .nav-submenu,
+.nav-item.has-submenu.active .nav-submenu {
+  opacity: 1;
+  max-height: 500px;
+}
+
+/* Untermenü öffnet sich auch beim Hover auf den Link */
+.nav-item.has-submenu:hover > a ~ .nav-submenu {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.nav-item.has-submenu.active > a {
+  color: rgba(255, 179, 68, 0.6);
+}
+
+.nav-submenu li a {
+  font-size: 1.2em;
+  -webkit-text-stroke: 1px rgba(255, 179, 68, 0.6);
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-submenu li a:hover {
+  -webkit-text-stroke: 1px #ffb344;
+  color: #ffb344; /* Füllung mit Koralle */
+  text-shadow: 0 0 15px rgba(255, 179, 68, 0.4);
+  transform: scale(1.03);
+}
+
+/* Vertikale Texte links */
+.nav-vertical-left {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: 'Trasandina', 'Inter', sans-serif;
+  font-size: 0.75em;
+  color: #ffb344;
+  letter-spacing: 0.1em;
+}
+
+.vertical-text a {
+  color: #ffb344;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.vertical-text a:hover {
+  color: #ffb344;
+  opacity: 0.8;
+}
+
+/* Sprache Selector unten mittig */
+.nav-language-center {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Trasandina', 'Inter', sans-serif;
+  font-size: 0.85em;
+  color: #ffb344;
+  pointer-events: auto;
+}
+
+.lang-active {
+  color: #ffb344;
+}
+
+.lang-separator {
+  color: rgba(255, 179, 68, 0.5);
+  margin: 0 4px;
+}
+
+.lang-inactive {
+  color: rgba(255, 179, 68, 0.5);
+}
+
+/* Social Media Icons unten rechts */
+.nav-social-bottom-right {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  pointer-events: auto;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffb344;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Trasandina', 'Inter', sans-serif;
+  font-size: 0.75em;
+  color: #ffb344;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  border-color: #ffb344;
+  color: #ffb344;
+  background-color: rgba(255, 179, 68, 0.1);
+}
+
+/* Alte Navbar ausblenden wenn neue aktiv ist */
 .navbar-desctop{
   display: none;
   position: absolute;
@@ -817,12 +1442,15 @@ label.error{
 
 .navbar-desctop-menu{
   float: right;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
   font-size: 0.81em;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-transform: none;
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar-desctop-menu li{
@@ -834,23 +1462,30 @@ label.error{
 .navbar-desctop-menu li a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: rgba(255,255,255,0.9);
+  padding: 0;
+  line-height: 1.5;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-desctop-menu li a:hover,
 .navbar-desctop-menu .active > a{
-  color:  #ffb344;
+  color: #ffb344;
 }
 
 .navbar-desctop-menu  > li{
   float: left;
   margin-left: 5.1em;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-desctop-menu > li > a{
   color: #fff;
   background-color: transparent;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-desctop-menu li ul{
@@ -906,9 +1541,12 @@ label.error{
   position: fixed;
   z-index: 5;
   top:0;
-  background-color:rgba(50, 50, 50, 0.95);
-  padding:1.3em 0 0;
-  box-shadow: 0 0 35px rgba(0,0,0,0.1);
+  background-color: rgba(39, 39, 39, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px 0;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .navbar-desctop.affix.affix-top{
@@ -944,7 +1582,7 @@ label.error{
 }
 
 .navbar-mobile .brand{
-  display: none;
+  display: flex !important;
   margin-left: 15px;
   font-size: 1.6em;
 }
@@ -985,7 +1623,7 @@ label.error{
 }
 
 .navbar-nav-mobile{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
   letter-spacing: 0.32em;
@@ -1117,17 +1755,37 @@ label.error{
   position: relative;
   z-index: 2;
   color: #fff;
-  text-align: right;
-  padding-left: 38.5vmin;
+  text-align: center;
+  padding-left: 0;
+  max-width: 817px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 .main-header h1{
   color: #fff;
-  margin:0;
-  margin-right: -0.32em;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  margin: 0 0 32px 0;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.main-header-subtitle {
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -1177,11 +1835,12 @@ label.error{
   display: inline-block;
   vertical-align: middle;
   background-color: transparent;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1em;
   line-height: 1;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -1224,7 +1883,7 @@ label.error{
 }
 
 .slide-title{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -1250,8 +1909,8 @@ label.error{
 }
 
 .entry-title{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
   font-size: 3.6em;
   margin:0 0 1em;
   letter-spacing: 0.1em;
@@ -1310,16 +1969,60 @@ label.error{
 }
 
 .service-item{
-  margin-bottom:2em; 
+  margin-bottom: 32px; 
+  padding: 32px;
+  background-color: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-item:hover{
+  background-color: rgba(255,255,255,0.05);
+  border-color: rgba(255, 179, 68, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .service-item:last-child{
   margin-bottom: 0;
 }
 
+/* Erste drei Service-Items kleiner - nur für About Section (Experten für Statik und Tragwerksplanung) */
+.about .col-about-spec .service-item:nth-child(1),
+.about .col-about-spec .service-item:nth-child(2),
+.about .col-about-spec .service-item:nth-child(3) {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.about .col-about-spec .service-item:nth-child(1) h4,
+.about .col-about-spec .service-item:nth-child(2) h4,
+.about .col-about-spec .service-item:nth-child(3) h4 {
+  font-size: 20px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.about .col-about-spec .service-item:nth-child(1) p,
+.about .col-about-spec .service-item:nth-child(2) p,
+.about .col-about-spec .service-item:nth-child(3) p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about .col-about-spec .service-item:nth-child(1) img,
+.about .col-about-spec .service-item:nth-child(2) img,
+.about .col-about-spec .service-item:nth-child(3) img {
+  width: 40px;
+  height: auto;
+}
+
 .service-item h4{
-  margin-top: 0.8em;
-  margin-bottom: 1.1em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 1.3;
 }
 
 .services .service-item h4{
@@ -1394,7 +2097,8 @@ label.error{
 
 .object-title{
   font-size: 1em;
-  font-family: 'montserratsemibold';
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-weight: normal;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1405,7 +2109,8 @@ label.error{
 }
 
 .object-content{
-  font-family: 'montserratlight', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 300;
   font-size: 0.75em;
   line-height: 2.6;
   color: #fff;
@@ -1438,6 +2143,14 @@ label.error{
 .project{
   padding: 0;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
 }
 
 .project figure{
@@ -1447,9 +2160,9 @@ label.error{
 .project figure img{
   display: block;
   width: 100%;
-  -webkit-transition: all 8s linear;
-  -o-transition: all 8s linear;
-  transition: all 8s linear;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project figure:after{
@@ -1459,11 +2172,9 @@ label.error{
   top:0;
   width: 100%;
   height: 100%;
-  background-color: #111;
-  opacity: 0.7;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project.project-light figure:after{
@@ -1485,13 +2196,13 @@ label.error{
   top:0;
   left:0;
   margin:0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
+  font-family: 'neueMachina', 'Neue Machina', sans-serif;
+  font-weight: 400;
   font-size: 1.56em;
   line-height: 1.45;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.01em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -1502,11 +2213,11 @@ label.error{
   left: 0;
   bottom: 0;
   margin:0 0 -0.8em;
-  font-family: 'Oswald', sans-serif;
-  font-weight: normal;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
   font-size: 14px;
   color: #fff;
-  letter-spacing: 0.8em;
+  letter-spacing: 0.2em;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
@@ -1590,6 +2301,28 @@ label.error{
   height: 490px;
 }
 
+/* Desktop: .hello auf 400px setzen */
+@media (min-width: 992px) {
+  .hello {
+    height: 400px;
+  }
+  
+  .service-in-projects {
+    height: 400px;
+  }
+}
+
+/* Mobile: .hello auf 368px setzen */
+@media (max-width: 991px) {
+  .hello {
+    height: 368px;
+  }
+  
+  .service-in-projects {
+    height: 368px;
+  }
+}
+
 
 /* 5.1 Carousel */
 
@@ -1599,10 +2332,11 @@ label.error{
 .owl-next{
   position: absolute;
   top:50%;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size:1em;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-weight: 500;
   color: #fff;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1769,11 +2503,11 @@ img.mfp-img{
 
 
 .project-title-info{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
   font-size: 2vmin;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  text-transform: none;
+  letter-spacing: 0.02em;
   margin-top: 2.2em;
   margin-left: -1.8em;
 }
@@ -1800,11 +2534,11 @@ img.mfp-img{
 
 .project-details-title{
   position: relative;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 1.9em;
   line-height: 1.5;
-  text-transform: uppercase;
+  text-transform: none;
   color: #fff;
   margin: 0 0 0.7em;
 }
@@ -1853,7 +2587,7 @@ img.mfp-img{
 }
 
 .text-parallax-content{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 21.8em;
   line-height: 1;
@@ -1868,10 +2602,10 @@ img.mfp-img{
 .experience-info{
   position: relative;
   top: -0.75em;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.5625em;
   line-height: 1.45;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.01em;
   display: inline-block;
   text-align: left;
   margin:0 0 0 0.5em;
@@ -1967,7 +2701,8 @@ img.mfp-img{
 }
 
 .blog-tags{
-  font-family: 'montserratsemibold';
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   margin-top:-0.8em;
 }
 
@@ -1993,12 +2728,12 @@ img.mfp-img{
 }
 
 .blog-title{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
   line-height: 1.333;
   margin: 1.8em 0 0.8em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
 }
 
 .blog-info p{
@@ -2018,7 +2753,8 @@ img.mfp-img{
 }
 
 .blog-meta .author a{
-  font-family: 'montserratsemibold';
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   color:#686868;
 }
 
@@ -2040,13 +2776,11 @@ img.mfp-img{
 
 .read-more{
   display: inline-block;
-  font-family: 'montserratsemibold';
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 0.88em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.read-more{
+  letter-spacing: 0.05em;
+  text-transform: none;
   padding-right: 2em;
   background:url(../img/img-icon/read-more.png) right 50% no-repeat;
   -webkit-transition: all 0.3s;
@@ -2082,8 +2816,8 @@ img.mfp-img{
 }
 
 .post-header h3{
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 2.2em;
   line-height: 1.43;
   margin:0 0 0 0;
@@ -2117,10 +2851,10 @@ img.mfp-img{
 }
 
 .widget-title{
-  font-family: 'montserratsemibold';
-  font-weight: normal;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 1.3em;
-  text-transform: uppercase;
+  text-transform: none;
   text-align: center;
   margin: 0 0 2.25em 0;
 }
@@ -2155,12 +2889,12 @@ img.mfp-img{
 }
 
 .recent-post-title{
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 1.1em;
   line-height: 1.45;
   text-transform: none;
-  letter-spacing: 0;
+  letter-spacing: 0.01em;
   margin:0;
   position: relative;
 }
@@ -2233,6 +2967,7 @@ img.mfp-img{
   position: relative;
   overflow: hidden;
   margin-top: -1px;
+  z-index: 1;
 }
 
 .col-map{
@@ -2282,6 +3017,8 @@ img.mfp-img{
   color:#fff;
   padding:0;
   background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info-content{
@@ -2365,9 +3102,11 @@ img.mfp-img{
 
 .footer{
   text-align: center;
-  margin:7.1em 0 5.5em;
-  font-size: 12px;
-  color: #aaa;
+  margin: 120px 0 80px;
+  padding: 60px 0 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer .brand{
@@ -2415,7 +3154,7 @@ img.mfp-img{
 }
 
 .author-link{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trasandina', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #d0d0d0;
 }
 
@@ -2440,7 +3179,24 @@ img.mfp-img{
 
 
   html{
-    font-size: 85%;
+    font-size: 100%;
+  }
+  
+  /* Responsive Schriftgrößen angepasst */
+  h1, .h1 {
+    font-size: 52px;
+  }
+  
+  h2, .h2 {
+    font-size: 40px;
+  }
+  
+  h3, .h3 {
+    font-size: 32px;
+  }
+  
+  h4, .h4 {
+    font-size: 24px;
   }
 
 
@@ -2537,7 +3293,7 @@ img.mfp-img{
 
 
   html{
-    font-size: 92%;
+    font-size: 100%;
   }
 
 
@@ -2651,6 +3407,25 @@ img.mfp-img{
 
   .main-header{
     padding-left: 0;
+    text-align: center !important;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    max-width: 100%;
+  }
+  
+  .main-header h1 {
+    text-align: center !important;
+    margin-right: 0 !important;
+    font-size: 42px !important;
+    margin-bottom: 24px !important;
+    letter-spacing: -0.02em !important;
+  }
+  
+  .main-header-subtitle {
+    text-align: center !important;
+    margin-top: 1rem;
+    font-size: 18px !important;
+    padding: 0 20px;
   }
 
 
@@ -2691,5 +3466,628 @@ img.mfp-img{
     bottom: auto;
   }
 }
+
+/* ===============================================
+   MOBILE OPTIMIERUNG - Partner/Client Section
+   Kompaktes Grid-Layout mit mehr Spalten
+   =============================================== */
+
+@media (max-width: 991px) {
+  
+  .clients {
+    padding: 2rem 0;
+  }
+  
+  .clients-list {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    margin: 0 !important;
+    padding: 1rem 0.5rem !important;
+    list-style: none !important;
+  }
+  
+  .clients-list .client {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem !important;
+    margin: 0 !important;
+    background: #323232;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    min-height: 80px;
+    vertical-align: top !important;
+  }
+  
+  .clients-list .client:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: #3a3a3a;
+  }
+  
+  .clients-list .client a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .clients-list .client img {
+    width: 70px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: block !important;
+  }
+  
+  .clients-list .client:hover img,
+  .clients-list .client a:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+}
+
+@media (max-width: 480px) {
+  
+  /* Mobile Schriftgrößen wie auf DES.de */
+  h1, .h1 {
+    font-size: 38px !important;
+  }
+  
+  h2, .h2, .section-title {
+    font-size: 32px !important;
+  }
+  
+  h3, .h3 {
+    font-size: 28px !important;
+  }
+  
+  h4, .h4 {
+    font-size: 20px !important;
+  }
+  
+  body, p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .clients-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+    padding: 0.75rem 0.25rem !important;
+  }
+  
+  .clients-list .client {
+    padding: 0.5rem !important;
+    min-height: 70px;
+  }
+  
+  .clients-list .client img {
+    width: 60px !important;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  
+  .clients-list {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .clients-list .client img {
+    width: 75px !important;
+  }
+  
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  
+  .clients-list {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+  
+  .clients-list .client img {
+    width: 85px !important;
+  }
+  
+}
+
+/* ===============================================
+   MOBILE OPTIMIERUNG - Row-Base Row
+   Korrekte Darstellung der Row-Base Row auf Mobile
+   =============================================== */
+
+@media (max-width: 991px) {
+  
+  .row-base.row {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+  
+  .row-base.row::before,
+  .row-base.row::after {
+    content: none !important;
+    display: none !important;
+  }
+  
+  .row-base .col-base {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    float: none !important;
+  }
+  
+  .row-base .col-base:first-child {
+    margin-top: 0 !important;
+  }
+  
+  .row-base .col-base:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Clearfix auf Mobile entfernen */
+  .row-base .clearfix {
+    display: none !important;
+  }
+  
+  /* Section Content Row-Base Optimierung */
+  .section-content .row-base.row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+  
+  .section-content .row-base.row > [class*="col-"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+    margin-top: 0 !important;
+  }
+  
+  .section-content .row-base.row > [class*="col-"]:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* About Section Row-Base - kompaktere Abstände */
+  .about .row-base.row {
+    flex-direction: column;
+    gap: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .about .row-base.row .col-base {
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .about .row-base.row .col-base:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Contact Section Row-Base - kompaktere Abstände */
+  .contact-enhanced .row-base.row {
+    flex-direction: column;
+    gap: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .contact-enhanced .row-base.row .col-base {
+    margin-bottom: 2rem !important;
+  }
+  
+  .contact-enhanced .row-base.row .col-base:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Footer Row-Base */
+  .footer .row-base.row {
+    flex-direction: column;
+    gap: 0 !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .footer .row-base.row .col-base {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .footer .row-base.row .col-base:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Alle Col-Base innerhalb Row-Base - einheitliche Abstände */
+  .row-base .col-base {
+    margin-bottom: 2rem !important;
+  }
+  
+  .row-base .col-base:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  
+  .row-base .col-base {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .section-content .row-base.row > [class*="col-"] {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .about .row-base.row .col-base {
+    margin-bottom: 2rem !important;
+  }
+  
+  .contact-enhanced .row-base.row .col-base {
+    margin-bottom: 1.5rem !important;
+  }
+  
+}
+
+/* ===============================================
+   MOBILE OPTIMIERUNG - Projects Section
+   Zentrierung der Projekt-Elemente auf Mobile
+   =============================================== */
+
+@media (max-width: 991px) {
+  
+  .projects-carousel {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .projects-carousel .owl-stage-outer {
+    margin: 0 auto;
+  }
+  
+  .projects-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+  
+  .projects-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .project,
+  .project.project-light {
+    margin: 0 auto !important;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project figure {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .project figure img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .project figcaption {
+    text-align: center !important;
+    margin: 2rem 1rem !important;
+    left: 0 !important;
+    right: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-title {
+    text-align: center !important;
+    left: auto !important;
+    position: relative !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .project-category {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 1rem 0 0 0 !important;
+    text-align: center;
+    letter-spacing: 0.2em !important;
+  }
+  
+  .project-zoom {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(0.5) !important;
+  }
+  
+  .project figure:hover .project-zoom {
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+  
+}
+
+/* ===============================================
+   MOBILE OPTIMIERUNG - Experience/Text-Parallax Section
+   Sichtbarkeit des Parallax-Contents auf Mobile sicherstellen
+   =============================================== */
+
+@media (max-width: 991px) {
+  
+  .experience {
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+  }
+  
+  .text-parallax {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text-parallax-content {
+    font-size: 8rem !important;
+    line-height: 1 !important;
+    overflow: visible !important;
+    margin-bottom: 0 !important;
+    background: transparent !important;
+    color: #fff !important;
+    mix-blend-mode: normal !important;
+    -ms-mix-blend-mode: normal !important;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1;
+    display: block;
+    opacity: 0.3;
+    font-weight: 700;
+  }
+  
+  .experience-info {
+    position: relative !important;
+    top: 0 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 1rem 0 0 0 !important;
+    z-index: 2;
+    color: #fff;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  
+  .text-parallax {
+    min-height: 150px;
+  }
+  
+  .text-parallax-content {
+    font-size: 6rem !important;
+    opacity: 0.4;
+  }
+  
+  .experience-info {
+    font-size: 1.1rem !important;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  
+  .text-parallax-content {
+    font-size: 7rem !important;
+  }
+  
+  .experience-info {
+    font-size: 1.15rem !important;
+  }
+  
+}
+
+/* ===============================================
+   MOBILE OPTIMIERUNG - Service Section
+   Einheitliche, nicht zu hohe Service-Kästchen
+   =============================================== */
+
+@media (max-width: 991px) {
+  
+  /* Service Section - Einheitliche Höhen und Layout */
+  .services-section .service-item {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 2rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    background: #323232;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  .services-section .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .services-section .service-item img {
+    max-width: 60px !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto 1.5rem !important;
+    display: block !important;
+  }
+  
+  .services-section .service-item h4 {
+    min-height: auto !important;
+    height: auto !important;
+    font-size: 1.2rem !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.3 !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  .services-section .service-item p {
+    flex-grow: 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
+  }
+  
+  .services-section .service-item .btn {
+    width: 100% !important;
+    margin-top: 1rem !important;
+    padding: 1rem 2rem !important;
+    font-size: 0.85rem !important;
+    display: block !important;
+  }
+  
+  /* Alle Service-Container einheitlich */
+  .services-section .col-service {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 1.5rem;
+    float: none !important;
+  }
+  
+  .services-section .col-service:last-child {
+    margin-bottom: 0;
+  }
+  
+  .services-section .row-special {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .services-section .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100%;
+    display: grid;
+  }
+  
+  .services-section .row-services {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block;
+  }
+  
+  /* Alle Unterschiede entfernen */
+  .services-section .breite,
+  .services-section .position,
+  .services-section .abstand {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .services-section .col-base.col-service {
+    margin-top: 0 !important;
+  }
+  
+  /* Center Content Fix */
+  .services-section .center-content {
+    display: block !important;
+    justify-content: normal !important;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  
+  .services-section .service-item {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .services-section .service-item h4 {
+    font-size: 1.1rem !important;
+  }
+  
+  .services-section .service-item p {
+    font-size: 0.9rem !important;
+  }
+  
+  .services-section .service-item img {
+    max-width: 50px !important;
+  }
+  
+}
+
+/* Tablet Optimierung (481px - 768px) */
+@media (min-width: 481px) and (max-width: 991px) {
+  
+  .services-section .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+  
+  .services-section .col-service {
+    width: 50% !important;
+    float: left;
+    padding: 0 0.75rem !important;
+  }
+  
+  .services-section .service-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
 
 

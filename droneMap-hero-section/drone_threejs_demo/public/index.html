@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Drone Three.js Demo</title>
+  <style>
+    html,body { height:100%; margin:0; }
+    canvas { display:block; }
+    #info { position: absolute; top: 10px; left: 10px; color: #fff; font-family: sans-serif; z-index: 10; }
+    .btn { background:#ffffff33; color:white; padding:6px 10px; border-radius:6px; cursor:pointer; margin-right:8px; }
+  </style>
+</head>
+<body>
+  <div id="info">
+    <button id="toggleSpin" class="btn">Pause Rotors</button>
+    <label style="margin-left:8px">RPM: <input id="rpm" type="range" min="100" max="8000" value="2000"></label>
+    <span id="rpmVal">2000</span>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -12,10 +12,14 @@
 <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 
 <!-- Styles -->
-<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" media="screen">
 <link href="css/enhanced-styles.css" rel="stylesheet" media="screen">
+<link href="css/des-inspiration.css" rel="stylesheet" media="screen">
+<link href="css/liquid-glass.css" rel="stylesheet" media="screen">
+<link href="css/neuemachina-font.css" rel="stylesheet" media="screen">
 </head>
 <body>
   
@@ -66,37 +70,75 @@
          </ul>  
       </div>
 
-      <!-- Navigation Desctop -->
+      <!-- Navigation Desctop - DES.de Style -->
 
-      <nav class="navbar-desctop visible-md visible-lg">
-        <div class="container">
-          <a href="index.html" class="brand js-target-scroll">
-            Statikbüro<span class="text-primary">24</span>
-          </a>
-          <ul class="navbar-desctop-menu">
-            <li>
-              <a href="index.html">Start</a>
+      <!-- Hamburger Menu Toggle -->
+      <button class="hamburger-menu-toggle" id="hamburger-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="navbar-desctop-des" id="desktop-nav-menu">
+        <!-- Logo oben rechts -->
+        <div class="nav-logo-top-right">
+          <a href="index.html" class="brand-des js-target-scroll">Statikbüro<span class="text-primary">24</span></a>
+        </div>
+        
+        <!-- Zentrales vertikales Menü -->
+        <div class="nav-menu-center">
+          <ul class="nav-menu-vertical">
+            <li class="nav-item-large">
+              <a href="index.html">3D Erlebniswelt</a>
             </li>
-            <li class="active">
+            <li class="nav-item active">
               <a href="about.html">Über uns</a>
             </li>
-            <li>
+            <li class="nav-item">
+              <a href="projekte.html">Projekte</a>
+            </li>
+            <li class="nav-item has-submenu">
               <a href="projects.html">Leistungsportfolio</a>
-              <ul>
-                <li><a href="projects.html">Tragwerksplanung</a></li>
-                <li><a href="projects.html">Standsicherheitsnachweis</a></li>
-                <li><a href="projects.html">Bauantrag</a></li>
-                <li><a href="projects.html">Bewehrungsplan</a></li>
-                <li><a href="projects.html">Brandschutznachweis</a></li>
-                <li><a href="projects.html">Schallschutznachweis</a></li>
-                <li><a href="projects.html">Wärmeschutznachweis</a></li>
-                <li><a href="projects.html">Energieausweis</a></li>
+              <ul class="nav-submenu">
+                <li><a href="projects.html#tragwerksplanung">Tragwerksplanung</a></li>
+                <li><a href="projects.html#standsicherheitsnachweis">Standsicherheitsnachweis</a></li>
+                <li><a href="projects.html#bauantrag">Bauantrag</a></li>
+                <li><a href="projects.html#bewehrungsplan">Bewehrungsplan</a></li>
+                <li><a href="projects.html#brandschutznachweis">Brandschutznachweis</a></li>
+                <li><a href="projects.html#schallschutznachweis">Schallschutznachweis</a></li>
+                <li><a href="projects.html#wärmeschutznachweis">Wärmeschutznachweis</a></li>
+                <li><a href="projects.html#energieausweis">Energieausweis</a></li>
               </ul>
             </li>
-            <li>
+            <li class="nav-item">
               <a href="contacts.html">Kontakt</a>
             </li>
           </ul>
+        </div>
+
+        <!-- Vertikale Texte links -->
+        <div class="nav-vertical-left">
+          <div class="vertical-text">
+            <a href="datenschutz.html">Datenschutz | Statikbüro24</a>
+          </div>
+          <div class="vertical-text">
+            <a href="impressum.html">Impressum | Statikbüro24</a>
+          </div>
+          <div class="vertical-text">
+            <span>© 2025 Statikbüro24</span>
+          </div>
+        </div>
+
+        <!-- Sprache Selector unten mittig -->
+        <div class="nav-language-center">
+          <span class="lang-active">de</span> <span class="lang-separator">/</span> <span class="lang-inactive">en</span>
+        </div>
+
+        <!-- Social Media Icons unten rechts -->
+        <div class="nav-social-bottom-right">
+          <a href="" class="social-icon">in</a>
+          <a href="" class="social-icon">k</a>
+          <a href="" class="social-icon">f</a>
         </div>
       </nav>
 
@@ -104,43 +146,21 @@
 
       <nav class="navbar-mobile">
         <a href="index.html" class="brand js-target-scroll">
-          Statikbüro<span class="text-primary">24</span>
+          <img src="img/colored-logo.png" alt="Statikbüro24">
         </a>
-
-        <!-- Navbar Collapse -->
-
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbar-mobile"> 
-          <ul class="navbar-nav-mobile">
-            <li>
-              <a href="index.html">Start</a>
-            </li>
-            <li class="active">
-              <a href="about.html">Über uns</a>
-            </li>
-            <li>
-              <a href="#">Leistungsportfolio <i class="fa fa-angle-down"></i></a>
-              <ul>
-                <li><a href="projects.html">Tragwerksplanung</a></li>
-                <li><a href="projects.html">Standsicherheitsnachweis</a></li>
-                <li><a href="projects.html">Bauantrag</a></li>
-                <li><a href="projects.html">Bewehrungsplan</a></li>
-                <li><a href="projects.html">Brandschutznachweis</a></li>
-                <li><a href="projects.html">Schallschutznachweis</a></li>
-                <li><a href="projects.html">Wärmeschutznachweis</a></li>
-                <li><a href="projects.html">Energieausweis</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="contacts.html">Kontakt</a>
-            </li>
-          </ul>
+        
+        <div class="navbar-mobile-right">
+          <a href="tel:+4933627404183" class="navbar-mobile-phone-btn">
+            <span class="phone-btn-label">
+              <i class="fa fa-phone"></i>
+            </span>
+          </a>
+          
+          <button class="hamburger-menu-toggle" id="hamburger-toggle-mobile">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
       </nav> 
     </header>
@@ -213,6 +233,97 @@
             .client a img {
               width: 100px;
               border-radius: 12px;
+            }
+            
+            /* Optimiertes Partner-Grid für Mobile */
+            @media (max-width: 991px) {
+              .clients-list {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 1rem !important;
+                margin: 0 !important;
+                padding: 1rem 0.5rem !important;
+                list-style: none !important;
+              }
+              
+              .clients-list .client {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0.75rem !important;
+                margin: 0 !important;
+                background: #323232;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                min-height: 80px;
+              }
+              
+              .clients-list .client:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                background: #3a3a3a;
+              }
+              
+              .clients-list .client a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+              }
+              
+              .clients-list .client a img {
+                width: 70px !important;
+                max-width: 100% !important;
+                height: auto !important;
+                opacity: 0.5;
+                transition: all 0.3s ease;
+                border-radius: 8px;
+              }
+              
+              .clients-list .client:hover a img {
+                opacity: 1;
+                transform: scale(1.05);
+              }
+            }
+            
+            @media (max-width: 480px) {
+              .clients-list {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 0.75rem !important;
+                padding: 0.75rem 0.25rem !important;
+              }
+              
+              .clients-list .client {
+                padding: 0.5rem !important;
+                min-height: 70px;
+              }
+              
+              .clients-list .client a img {
+                width: 60px !important;
+              }
+            }
+            
+            @media (min-width: 481px) and (max-width: 768px) {
+              .clients-list {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 1rem !important;
+              }
+              
+              .clients-list .client a img {
+                width: 75px !important;
+              }
+            }
+            
+            @media (min-width: 769px) and (max-width: 991px) {
+              .clients-list {
+                grid-template-columns: repeat(5, 1fr) !important;
+                gap: 1.2rem !important;
+              }
+              
+              .clients-list .client a img {
+                width: 85px !important;
+              }
             }
           </style>
           <div class="section-content">
@@ -554,7 +665,34 @@ $(document).ready(function() {
       $(this).find('.service-icon-enhanced').removeClass('pulse');
     }
   );
-});
+  });
+
+  // Hamburger Menu Toggle
+  $('.hamburger-menu-toggle').on('click', function() {
+    $(this).toggleClass('active');
+    $('#desktop-nav-menu').toggleClass('active');
+    $('body').toggleClass('menu-open');
+  });
+
+  // Menü schließen beim Klick auf Link
+  $('#desktop-nav-menu').on('click', function(e) {
+    if ($(e.target).is('a') && !$(e.target).parent().parent().hasClass('nav-submenu')) {
+      setTimeout(function() {
+        $('.hamburger-menu-toggle').removeClass('active');
+        $('#desktop-nav-menu').removeClass('active');
+        $('body').removeClass('menu-open');
+      }, 100);
+    }
+  });
+
+  // ESC Taste zum Schließen
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' && $('#desktop-nav-menu').hasClass('active')) {
+      $('.hamburger-menu-toggle').removeClass('active');
+      $('#desktop-nav-menu').removeClass('active');
+      $('body').removeClass('menu-open');
+    }
+  });
 </script>
 
 </body>

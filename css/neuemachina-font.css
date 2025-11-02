@@ -1,0 +1,11 @@
+/* Neue Machina Font Definition */
+/* Separates CSS-File um Konflikte zu vermeiden */
+
+@font-face {
+  font-family: 'neueMachina';
+  src: url('../fonts/PP Neue Machina - Free for Personal Use/PPNeueMachina-PlainRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
