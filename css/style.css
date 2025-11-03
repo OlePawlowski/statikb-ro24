@@ -1713,8 +1713,21 @@ body.menu-open {
 
 .main{
   position: relative;
-  overflow: hidden;
-  min-height: 420px;
+  overflow: visible;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* Desktop: Iframe Styles */
+.main iframe,
+.main .frame {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  border: none;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .main-inner{
