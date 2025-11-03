@@ -1119,20 +1119,17 @@ body.menu-open {
   .nav-item.has-submenu .nav-submenu {
     margin: 0 !important;
     padding: 0 !important;
+    padding-left: 16px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     /* Auf Mobile: immer sichtbar wenn aktiv */
-    opacity: 1;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-  }
-  
-  /* Nur wenn das Untermenü sichtbar ist, Margin hinzufügen */
-  .nav-item.has-submenu.active .nav-submenu {
-    margin-top: 12px !important;
-    max-height: 500px !important;
-    opacity: 1 !important;
+    opacity: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease, opacity 0.3s ease !important;
+    display: block !important;
+    flex-direction: column !important;
+    visibility: hidden !important;
   }
   
   /* Hover auf Mobile deaktivieren - nur Click funktioniert */
@@ -1140,6 +1137,39 @@ body.menu-open {
     margin-top: 0 !important;
     max-height: 0 !important;
     opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  
+  /* Nur wenn das Untermenü sichtbar ist, Margin hinzufügen */
+  .nav-item.has-submenu.active .nav-submenu {
+    margin-top: 12px !important;
+    max-height: 500px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    flex-direction: column !important;
+    padding-left: 16px !important;
+  }
+  
+  .nav-item.has-submenu.active .nav-submenu li {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Submenü Links auf Mobile besser sichtbar */
+  .nav-submenu li a {
+    display: block !important;
+    padding: 8px 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: transparent !important;
+    -webkit-text-stroke: 1px rgba(255, 179, 68, 0.6) !important;
+  }
+  
+  .nav-submenu li a:hover {
+    color: #ffb344 !important;
+    -webkit-text-stroke: 1px #ffb344 !important;
   }
   
   /* Vertikale Texte rechts */
@@ -1332,16 +1362,18 @@ body.menu-open {
   transition: all 0.3s ease;
 }
 
-.nav-item.has-submenu:hover .nav-submenu,
-.nav-item.has-submenu.active .nav-submenu {
-  opacity: 1;
-  max-height: 500px;
-}
-
-/* Untermenü öffnet sich auch beim Hover auf den Link */
-.nav-item.has-submenu:hover > a ~ .nav-submenu {
-  opacity: 1;
-  max-height: 500px;
+/* Desktop: Hover-Effekte für Submenü */
+@media (min-width: 992px) {
+  .nav-item.has-submenu:hover .nav-submenu,
+  .nav-item.has-submenu.active .nav-submenu {
+    opacity: 1;
+    max-height: 500px;
+  }
+  
+  .nav-item.has-submenu:hover > a ~ .nav-submenu {
+    opacity: 1;
+    max-height: 500px;
+  }
 }
 
 .nav-item.has-submenu.active > a {

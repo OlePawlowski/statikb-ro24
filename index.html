@@ -1204,7 +1204,13 @@ $(document).ready(function() {
   $(document).on('click', '.nav-item.has-submenu > a', function(e) {
     if ($(window).width() <= 991) {
       e.preventDefault();
-      $(this).parent('.nav-item.has-submenu').toggleClass('active');
+      e.stopPropagation(); // Verhindere Event-Bubbling zum Menü-Container
+      var $navItem = $(this).parent('.nav-item.has-submenu');
+      $navItem.toggleClass('active');
+      
+      // Force reflow um sicherzustellen, dass CSS angewendet wird
+      void $navItem[0].offsetHeight;
+      
       return false;
     }
   });
@@ -1214,7 +1220,13 @@ $(document).ready(function() {
   
   // Menü schließen beim Klick auf Link
   $('#desktop-nav-menu').on('click', function(e) {
-    if ($(e.target).is('a') && !$(e.target).parent().parent().hasClass('nav-submenu')) {
+    // Prüfe ob es ein Submenü-Link ist oder der Hauptlink eines Submenü-Items
+    var $target = $(e.target);
+    var isSubmenuLink = $target.closest('.nav-submenu').length > 0;
+    var isSubmenuToggle = $target.closest('.nav-item.has-submenu > a').length > 0;
+    
+    // Wenn es ein normaler Link ist (nicht Submenü-Toggle oder Submenü-Link)
+    if ($target.is('a') && !isSubmenuLink && !isSubmenuToggle) {
       // Schließe Menü nach kurzer Verzögerung, damit der Link funktioniert
       setTimeout(function() {
         $('.hamburger-menu-toggle').removeClass('active');
