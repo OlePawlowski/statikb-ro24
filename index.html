@@ -205,6 +205,12 @@
         title="Statikbüro 3D Drohnen Tour"
         allowfullscreen>
       </iframe>
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-down-indicator js-target-scroll">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 10L12 15L17 10" stroke="#ffb344" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </main>
 
     <div class="content">   
@@ -1203,17 +1209,30 @@
 <script>
 $(document).ready(function() {
   // Hamburger Menu Toggle
+  var scrollPosition = 0;
+  
   $('.hamburger-menu-toggle').on('click', function() {
+    if ($(window).width() <= 991) {
+      if ($(this).hasClass('active')) {
+        // Menü wird geschlossen - wiederherstellen der Scroll-Position
+        $('body').removeClass('menu-open');
+        setTimeout(function() {
+          $(window).scrollTop(scrollPosition);
+          $('body').css({ top: '', position: '' });
+        }, 10);
+      } else {
+        // Menü wird geöffnet - speichere Scroll-Position
+        scrollPosition = $(window).scrollTop();
+        $('body').css({ top: -scrollPosition + 'px', position: 'fixed' });
+        $('body').addClass('menu-open');
+      }
+    }
+    
     $(this).toggleClass('active');
     $('#desktop-nav-menu').toggleClass('active');
-    $('body').toggleClass('menu-open');
     
-    // Verhindere automatisches Scrollen nach oben auf Mobile
-    if ($(window).width() <= 991) {
-      var scrollPos = $(window).scrollTop();
-      setTimeout(function() {
-        $(window).scrollTop(scrollPos);
-      }, 0);
+    if ($(window).width() > 991) {
+      $('body').toggleClass('menu-open');
     }
   });
 
@@ -1248,13 +1267,16 @@ $(document).ready(function() {
       setTimeout(function() {
         $('.hamburger-menu-toggle').removeClass('active');
         $('#desktop-nav-menu').removeClass('active');
-        $('body').removeClass('menu-open');
-        // Verhindere automatisches Scrollen nach oben auf Mobile
+        
         if ($(window).width() <= 991) {
-          var scrollPos = $(window).scrollTop();
+          // Wiederherstellen der Scroll-Position auf Mobile
+          $('body').removeClass('menu-open');
           setTimeout(function() {
-            $(window).scrollTop(scrollPos);
-          }, 100);
+            $(window).scrollTop(scrollPosition);
+            $('body').css({ top: '', position: '' });
+          }, 10);
+        } else {
+          $('body').removeClass('menu-open');
         }
       }, 100);
     }
@@ -1271,19 +1293,43 @@ $(document).ready(function() {
     }
   });
   
-  // Verhindere automatisches Scrollen beim Laden der Seite auf Mobile
+  // Verhindere automatisches Scrollen nach oben auf Mobile beim Scrollen
+  var isScrolling = false;
+  var scrollTimeout;
+  
+  $(window).on('scroll', function() {
+    if ($(window).width() <= 991) {
+      isScrolling = true;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        isScrolling = false;
+      }, 150);
+    }
+  });
+  
+  // Verhindere automatisches Scrollen bei verschiedenen Events auf Mobile
   if ($(window).width() <= 991) {
-    $(window).on('load', function() {
-      var scrollPos = sessionStorage.getItem('scrollPos');
-      if (scrollPos) {
-        $(window).scrollTop(scrollPos);
-        sessionStorage.removeItem('scrollPos');
-      }
+    // Verhindere Scrollen beim Touch-Start
+    var touchStartY = 0;
+    $(document).on('touchstart', function(e) {
+      touchStartY = e.originalEvent.touches[0].clientY;
     });
     
-    // Speichere Scroll-Position vor Navigation
-    $(window).on('beforeunload', function() {
-      sessionStorage.setItem('scrollPos', $(window).scrollTop());
+    // Verhindere unerwartetes Scrollen
+    $(document).on('touchmove', function(e) {
+      // Erlaube normales Scrollen
+      return true;
+    });
+    
+    // Verhindere Scrollen beim Menü-Toggle
+    $(document).on('click', '.hamburger-menu-toggle, #desktop-nav-menu', function() {
+      if (!isScrolling) {
+        setTimeout(function() {
+          if ($(window).scrollTop() === 0 && $(document).height() > $(window).height()) {
+            // Nur wenn wir wirklich oben sind und es mehr Content gibt
+          }
+        }, 0);
+      }
     });
   }
 

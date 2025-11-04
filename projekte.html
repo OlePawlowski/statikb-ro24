@@ -185,6 +185,7 @@
                   id="drone-hero"
                   title="Animated Drone Hero" 
                   frameborder="0" 
+                  scrolling="no"
                   allowfullscreen 
                   mozallowfullscreen="true" 
                   webkitallowfullscreen="true" 
@@ -194,7 +195,7 @@
                   execution-while-not-rendered 
                   web-share 
                   src="https://drone-fly-now.vercel.app/embed?transparent=true"
-                  style="background: transparent;"
+                  style="background: transparent; overflow: hidden;"
                 ></iframe>
               </div>
             </a>
@@ -642,19 +643,6 @@
 }
 
 
-.drone-button .sketchfab-embed-wrapper {
-  width: 260px;
-  height: 260px;
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  order: 2;
-}
-
 .drone-button .sketchfab-embed-wrapper iframe {
   width: 100% !important;
   height: 100% !important;
@@ -663,6 +651,43 @@
   background: transparent;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  /* Scrollbars in Safari/WebKit verstecken */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE und Edge */
+}
+
+/* Scrollbars in Safari/WebKit für iframe verstecken */
+.drone-button .sketchfab-embed-wrapper iframe::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+.drone-button .sketchfab-embed-wrapper::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* Stelle sicher, dass der Wrapper keine Scrollbars zeigt */
+.drone-button .sketchfab-embed-wrapper {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  overflow: hidden !important;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  order: 2;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE und Edge */
 }
 
 .drone-fly-label {

@@ -968,8 +968,18 @@ label.error{
 }
 
 /* Body lock when menu is open */
-body.menu-open {
-  overflow: hidden;
+/* Verhindere automatisches Scrollen nach oben auf Mobile */
+@media (max-width: 991px) {
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1771,6 +1781,57 @@ body.menu-open {
 -------------------------------------------------------------------------------*/
 
 
+
+/* Scroll Indicator für Iframe */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 179, 68, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 179, 68, 0.3);
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.scroll-down-indicator:hover {
+  background: rgba(255, 179, 68, 0.2);
+  border-color: rgba(255, 179, 68, 0.6);
+  transform: translateY(5px);
+  box-shadow: 0 4px 20px rgba(255, 179, 68, 0.3);
+}
+
+.scroll-down-indicator svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-indicator:hover svg {
+  transform: translateY(3px);
+}
+
+@media (max-width: 991px) {
+  .scroll-down-indicator {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .scroll-down-indicator svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .main{
   position: relative;
