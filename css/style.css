@@ -3134,6 +3134,12 @@ img.mfp-img{
   z-index: 1;
 }
 
+.contact-enhanced {
+  position: relative;
+  z-index: 100 !important;
+  margin-top: 0;
+}
+
 .col-map{
   height: 35em;
 }
