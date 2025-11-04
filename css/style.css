@@ -2697,6 +2697,35 @@ img.mfp-img{
   text-align: center;
 }
 
+/* Elfsight Google Reviews Widget Styles */
+.clients .section-content {
+  margin-top: 60px;
+  min-height: 400px; /* Mindesthöhe für Widget */
+  width: 100%;
+  display: block;
+}
+
+/* Elfsight App Container */
+.elfsight-app-ead9122e-f2bf-4770-8f37-ee1a083c4c4d {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 400px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Stelle sicher, dass iframes innerhalb des Widgets sichtbar sind */
+.elfsight-app-ead9122e-f2bf-4770-8f37-ee1a083c4c4d iframe {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 400px !important;
+  border: none !important;
+}
+
 .clients-list{
   margin:-3.8em -1.95em 0;
 }
