@@ -6,8 +6,8 @@ $company = $_POST["company"];
 $message = $_POST["message"];
 
 
-$EmailTo = "000.lunchbox@gmail.com";
-$Subject = "New Message Received";
+$EmailTo = "info@statikbuero-24.de";
+$Subject = "Neue Nachricht vom Kontaktformular";
 
 // prepare email body text
 $Fields .= "Name: ";
@@ -33,4 +33,3 @@ $Fields .= "\n";
 
 // send email
 $success = mail($EmailTo,  $Subject,  $Fields, "From:".$email);
-
