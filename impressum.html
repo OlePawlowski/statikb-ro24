@@ -49,24 +49,56 @@
       </div>
     </div>
 
-    <header id="top" class="header-inner">
-      <div class="brand-panel">
-        <a href="index.html" class="brand">
-          <img style="width: 120px;" src="img/colored-logo.png" alt="Statikbüro24 Logo">
+    <!-- Header -->
+    <header id="top" class="header-home">
+        <div class="brand-panel">
+          <a href="index.html" class="brand js-target-scroll">
+            <img style="width: 120px;" src="img/colored-logo.png" alt="Statikbüro24 Logo">
+          </a>
+          <div class="brand-name">Statikbüro Berlin</div>
+          <div class="slide-number">
+            <span class="current-number text-primary">0<span class="count">7</span></span>
+            <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
+          </div>
+        </div>
+        <div class="header-phone">+49 (0) 3362 | 740 41 83</div>
+        <div class="vertical-panel"></div>
+        <div class="vertical-panel-content">
+          <div class="vertical-panel-info">
+              <div class="vertical-panel-title">Statikbüro Berlin</div>
+              <div class="line"></div>
+           </div>
+          <ul class="social-list">
+            <li><a href="" class="fa fa-instagram"></a></li>
+            <li><a href="" class="fa fa-twitter"></a></li>
+            <li><a href="" class="fa fa-behance"></a></li>
+            <li><a href="" class="fa fa-facebook"></a></li>
+           </ul>  
+        </div>
+
+      <!-- Drone im Header -->
+      <div class="header-drone-container">
+        <a href="index.html" class="header-drone-button">
+          <span class="header-drone-fly-label">FLIEG MICH</span>
+          <div class="header-sketchfab-embed-wrapper">
+            <iframe 
+              id="header-drone"
+              title="Animated Drone Header" 
+              frameborder="0" 
+              scrolling="no"
+              allowfullscreen 
+              mozallowfullscreen="true" 
+              webkitallowfullscreen="true" 
+              allow="autoplay; fullscreen; xr-spatial-tracking" 
+              xr-spatial-tracking 
+              execution-while-out-of-viewport 
+              execution-while-not-rendered 
+              web-share 
+              src="https://drone-fly-now.vercel.app/embed?transparent=true"
+              style="background: transparent; overflow: hidden;">
+            </iframe>
+          </div>
         </a>
-        <div class="brand-name">Statikbüro Berlin</div>
-      </div>
-      <div class="header-phone">+49 (0) 3362 | 740 41 83</div>
-      <div class="vertical-panel-content">
-        <div class="vertical-panel-info">
-            <div class="line"></div>
-         </div>
-        <ul class="social-list">
-          <li><a href="" class="fa fa-instagram"></a></li>
-          <li><a href="" class="fa fa-twitter"></a></li>
-          <li><a href="" class="fa fa-behance"></a></li>
-          <li><a href="" class="fa fa-facebook"></a></li>
-         </ul>  
       </div>
 
       <!-- Navigation Desctop - DES.de Style -->
@@ -81,7 +113,9 @@
       <nav class="navbar-desctop-des" id="desktop-nav-menu">
         <!-- Logo oben rechts -->
         <div class="nav-logo-top-right">
-          <a href="index.html" class="brand-des js-target-scroll">Statikbüro<span class="text-primary">24</span></a>
+          <a href="index.html" class="brand-des js-target-scroll">
+            <img style="width: 120px;" src="img/colored-logo.png" alt="Statikbüro24 Logo">
+          </a>
         </div>
         
         <!-- Zentrales vertikales Menü -->
@@ -118,13 +152,13 @@
         <!-- Vertikale Texte links -->
         <div class="nav-vertical-left">
           <div class="vertical-text">
-            <a href="datenschutz.html">Datenschutz | Statikbüro24</a>
+            <a href="datenschutz.html">Datenschutz</a>
           </div>
           <div class="vertical-text">
-            <a href="impressum.html">Impressum | Statikbüro24</a>
+            <a href="impressum.html">Impressum</a>
           </div>
           <div class="vertical-text">
-            <span>© 2025 Statikbüro24</span>
+            <span>© 2025</span>
           </div>
         </div>
 
@@ -168,29 +202,14 @@
 
   <div class="layout">
     
-    <!-- Home -->
+    <!-- Home / Hero Section -->
     
-    <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
+    <main class="main">
+      <!-- Hero Content -->
       <div class="container">
-        <header class="main-header">
-          <h1>Impressum</h1>
-        </header>
-      </div>
-
-      <!-- Lines -->
-
-      <div class="page-lines">
-        <div class="container">
-          <div class="col-line col-xs-4">
-            <div class="line"></div>
-          </div>
-          <div class="col-line col-xs-4">
-            <div class="line"></div>
-          </div>
-          <div class="col-line col-xs-4">
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+        <div class="main-hero-header">
+          <h1 class="hero-title">Impressum<span class="text-primary">.</span></h1>
+          <p class="hero-subtitle">Angaben gemäß § 5 TMG. Hier finden Sie alle rechtlichen Informationen und Kontaktdaten unseres Unternehmens.</p>
         </div>
       </div>
     </main>
@@ -252,7 +271,7 @@
           <div class="row-base row">
             <div class="col-base text-left-md col-md-4">
               <a href="index.html" class="brand">
-                Statikbüro<span class="text-primary">24</span>
+                <img style="width: 120px;" src="img/colored-logo.png" alt="Statikbüro24 Logo">
               </a>
             </div>
             <div class="text-center-md col-base col-md-4">
@@ -262,7 +281,7 @@
             </div>
             <div class="text-right-md col-base col-md-4">
               <div class="footer-links-wrapper">
-                <p class="footer-copyright">© 2025 Statikbüro24. All rights reserved.</p>
+                <p class="footer-copyright">© 2025. All rights reserved.</p>
                 <div class="footer-links">
                   <a href="impressum.html" class="footer-link">Impressum</a>
                   <span class="footer-separator">|</span>
@@ -346,19 +365,75 @@
 <script>
 $(document).ready(function() {
   // Hamburger Menu Toggle
+  var scrollPosition = 0;
+  
   $('.hamburger-menu-toggle').on('click', function() {
+    if ($(window).width() <= 991) {
+      if ($(this).hasClass('active')) {
+        // Menü wird geschlossen - wiederherstellen der Scroll-Position
+        $('body').removeClass('menu-open');
+        setTimeout(function() {
+          $(window).scrollTop(scrollPosition);
+          $('body').css({ top: '', position: '' });
+        }, 10);
+      } else {
+        // Menü wird geöffnet - speichere Scroll-Position
+        scrollPosition = $(window).scrollTop();
+        $('body').css({ top: -scrollPosition + 'px', position: 'fixed' });
+        $('body').addClass('menu-open');
+      }
+    }
+    
     $(this).toggleClass('active');
     $('#desktop-nav-menu').toggleClass('active');
-    $('body').toggleClass('menu-open');
+    
+    if ($(window).width() > 991) {
+      $('body').toggleClass('menu-open');
+    }
   });
 
+  // Mobile: Dropdown-Pfeil für Submenü
+  $(document).on('click', '.nav-item.has-submenu > a', function(e) {
+    if ($(window).width() <= 991) {
+      e.preventDefault();
+      e.stopPropagation(); // Verhindere Event-Bubbling zum Menü-Container
+      var $navItem = $(this).parent('.nav-item.has-submenu');
+      $navItem.toggleClass('active');
+      
+      // Force reflow um sicherzustellen, dass CSS angewendet wird
+      void $navItem[0].offsetHeight;
+      
+      return false;
+    }
+  });
+
+  // Untermenü öffnet sich beim Hover, Link führt direkt zur Seite
+  // Das Untermenü wird beim Hover automatisch über CSS angezeigt
+  
   // Menü schließen beim Klick auf Link
   $('#desktop-nav-menu').on('click', function(e) {
-    if ($(e.target).is('a') && !$(e.target).parent().parent().hasClass('nav-submenu')) {
+    // Prüfe ob es ein Submenü-Link ist oder der Hauptlink eines Submenü-Items
+    var $target = $(e.target);
+    var isSubmenuLink = $target.closest('.nav-submenu').length > 0;
+    var isSubmenuToggle = $target.closest('.nav-item.has-submenu > a').length > 0;
+    
+    // Wenn es ein normaler Link ist (nicht Submenü-Toggle oder Submenü-Link)
+    if ($target.is('a') && !isSubmenuLink && !isSubmenuToggle) {
+      // Schließe Menü nach kurzer Verzögerung, damit der Link funktioniert
       setTimeout(function() {
         $('.hamburger-menu-toggle').removeClass('active');
         $('#desktop-nav-menu').removeClass('active');
-        $('body').removeClass('menu-open');
+        
+        if ($(window).width() <= 991) {
+          // Wiederherstellen der Scroll-Position auf Mobile
+          $('body').removeClass('menu-open');
+          setTimeout(function() {
+            $(window).scrollTop(scrollPosition);
+            $('body').css({ top: '', position: '' });
+          }, 10);
+        } else {
+          $('body').removeClass('menu-open');
+        }
       }, 100);
     }
   });

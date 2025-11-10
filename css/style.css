@@ -845,23 +845,26 @@ label.error{
 
 /* Hamburger Menu Toggle - Modernes dreistrich-Icon wird zu X */
 .hamburger-menu-toggle {
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  z-index: 101;
+  position: fixed !important;
+  top: 40px !important;
+  right: 40px !important;
+  z-index: 10000 !important;
   width: 70px;
+  pointer-events: auto !important;
+  cursor: pointer !important;
   height: 70px;
   background: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   gap: 0;
   padding: 0;
   transition: all 0.3s ease;
-  pointer-events: auto;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .hamburger-line {
@@ -939,12 +942,17 @@ label.error{
 @media (max-width: 991px) {
   .hamburger-menu-toggle {
     display: flex !important;
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
+    position: fixed !important;
+    top: 40px !important;
+    right: 40px !important;
+    z-index: 10000 !important;
     width: 50px !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
     height: 50px !important;
     margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 
@@ -960,18 +968,18 @@ label.error{
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  background: rgba(39, 39, 39, 0.98);
+  background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0 !important;
+  visibility: hidden !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-desctop-des.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 /* Body lock when menu is open */
@@ -997,15 +1005,29 @@ label.error{
   }
   
   /* Desktop Header Elemente auf Mobile ausblenden */
+  .header-home .brand-panel,
+  .header-home .header-phone,
+  .header-home .vertical-panel,
+  .header-home .vertical-panel-content {
+    display: none !important;
+  }
+  
+  /* Brand Panel und Vertical Panel sollten nicht fixed sein, nur in Hero-Section */
   .brand-panel,
-  .header-phone,
   .vertical-panel,
   .vertical-panel-content {
-    display: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
   }
   
   /* Alle Hamburger-Menüs standardmäßig ausblenden */
   .hamburger-menu-toggle {
+    display: none !important;
+  }
+  
+  /* Hamburger-Icon im header-home auf Mobile ausblenden */
+  .header-home .hamburger-menu-toggle {
     display: none !important;
   }
   
@@ -1031,9 +1053,17 @@ label.error{
   
   /* Mobile Menu Layout Anpassungen */
   .navbar-desctop-des {
-    background: rgba(39, 39, 39, 0.98) !important;
-    pointer-events: auto !important;
+    background: rgba(10, 10, 10, 0.98) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
     z-index: 1001 !important;
+  }
+  
+  .navbar-desctop-des.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
   
   /* Alle Menüelemente klickbar machen */
@@ -1855,7 +1885,9 @@ label.error{
   min-height: 700px;
   border: none;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -1903,6 +1935,12 @@ label.error{
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 100px;
+  pointer-events: none;
+}
+
+.main-header h1,
+.main-header p {
+  pointer-events: auto;
 }
 
 .main-header h1{

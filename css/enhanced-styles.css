@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced Contact Section - bestehende Farben */
 .contact-enhanced {
-  background: var(--background-dark);
+  background: none !important;
   color: var(--text-white);
   padding: 5rem 0;
   position: relative;
@@ -320,14 +320,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-form-enhanced {
-  background: rgba(50, 50, 50, 0.95);
+  background: rgba(20, 20, 20, 0.95) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 179, 68, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+              0 0 30px rgba(255, 179, 68, 0.1),
+              inset 0 0 30px rgba(255, 179, 68, 0.03) !important;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -340,8 +341,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-control-enhanced {
-  background: #323232;
-  border: 1px solid #323232;
+  background: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid rgba(255, 179, 68, 0.2) !important;
   border-radius: 0.75em;
   padding: 1.1em 1.375em;
   color: #fff;
@@ -355,10 +356,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-control-enhanced:focus {
-  border-color: #ffb344;
-  background-color: #323232;
+  border-color: rgba(255, 179, 68, 0.6) !important;
+  background-color: rgba(20, 20, 20, 0.95) !important;
   outline: 0;
-  box-shadow: none;
+  box-shadow: 
+    0 0 10px rgba(255, 179, 68, 0.3),
+    inset 0 0 10px rgba(255, 179, 68, 0.1) !important;
 }
 
 .btn-enhanced {
