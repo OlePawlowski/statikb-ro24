@@ -1305,52 +1305,6 @@ $(document).ready(function() {
     }, 2000);
   }
   
-  // Iframe: Drohne nur bei Touch-and-Hold, nicht bei Swipe
-  if ($(window).width() <= 991) {
-    var iframeTouchStart = null;
-    var iframeTouchStartTime = 0;
-    var iframeTouchMoved = false;
-    var longPressThreshold = 500; // 500ms für Touch-and-Hold
-    
-    $('.main .frame').on('touchstart', function(e) {
-      iframeTouchStart = {
-        x: e.originalEvent.touches[0].clientX,
-        y: e.originalEvent.touches[0].clientY
-      };
-      iframeTouchStartTime = Date.now();
-      iframeTouchMoved = false;
-    });
-    
-    $('.main .frame').on('touchmove', function(e) {
-      if (iframeTouchStart) {
-        var currentX = e.originalEvent.touches[0].clientX;
-        var currentY = e.originalEvent.touches[0].clientY;
-        var deltaX = Math.abs(currentX - iframeTouchStart.x);
-        var deltaY = Math.abs(currentY - iframeTouchStart.y);
-        
-        // Wenn sich der Finger mehr als 10px bewegt hat, ist es ein Swipe
-        if (deltaX > 10 || deltaY > 10) {
-          iframeTouchMoved = true;
-          // Verhindere, dass der Swipe die Drohne steuert
-          e.stopPropagation();
-        }
-      }
-    });
-    
-    $('.main .frame').on('touchend', function(e) {
-      if (iframeTouchStart && !iframeTouchMoved) {
-        var touchDuration = Date.now() - iframeTouchStartTime;
-        // Wenn es kein Swipe war, aber auch kein langer Druck, verhindere es
-        if (touchDuration < longPressThreshold) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      }
-      iframeTouchStart = null;
-      iframeTouchMoved = false;
-    });
-  }
-
   // ESC Taste zum Schließen
   $(document).on('keydown', function(e) {
     if (e.key === 'Escape' && $('#desktop-nav-menu').hasClass('active')) {
