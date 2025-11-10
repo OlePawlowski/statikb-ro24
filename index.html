@@ -1259,50 +1259,50 @@ $(document).ready(function() {
     // Verhindere automatisches Scrollen beim Laden der Seite komplett
     var preventAutoScroll = true;
     var lastScrollTop = $(window).scrollTop();
+    var initialScrollTop = $(window).scrollTop();
+    var scrollPrevented = false;
     
-    // Verhindere Scrollen beim Touch-Start
-    var touchStartY = 0;
-    var touchStartTime = 0;
-    $(document).on('touchstart', function(e) {
-      touchStartY = e.originalEvent.touches[0].clientY;
-      touchStartTime = Date.now();
+    // Speichere die initiale Scroll-Position beim Laden
+    $(window).on('load', function() {
+      initialScrollTop = $(window).scrollTop();
+      lastScrollTop = initialScrollTop;
     });
     
-    // Verhindere unerwartetes Scrollen
-    $(document).on('touchmove', function(e) {
-      // Erlaube normales Scrollen
-      return true;
-    });
-    
-    // Verhindere automatisches Scrollen nach oben beim Laden
+    // Verhindere automatisches Scrollen nach oben in Hero-Sections
     $(window).on('scroll', function() {
-      if (preventAutoScroll && $(window).scrollTop() === 0 && lastScrollTop > 0) {
-        // Wenn wir plötzlich oben sind, war es wahrscheinlich automatisch
-        setTimeout(function() {
-          if ($(window).scrollTop() === 0 && lastScrollTop > 0) {
-            // Verhindere automatisches Scrollen
-            preventAutoScroll = false;
-          }
-        }, 100);
+      var currentScrollTop = $(window).scrollTop();
+      
+      // Wenn wir plötzlich nach oben gescrollt werden (besonders in Hero-Sections)
+      if (preventAutoScroll && currentScrollTop < lastScrollTop - 50 && currentScrollTop < 200) {
+        // Verhindere automatisches Scrollen nach oben
+        if (!scrollPrevented) {
+          scrollPrevented = true;
+          $(window).scrollTop(lastScrollTop);
+          setTimeout(function() {
+            scrollPrevented = false;
+          }, 100);
+        }
       }
-      lastScrollTop = $(window).scrollTop();
+      
+      lastScrollTop = currentScrollTop;
     });
     
-    // Verhindere Scrollen beim Menü-Toggle
-    $(document).on('click', '.hamburger-menu-toggle, #desktop-nav-menu', function() {
-      if (!isScrolling) {
-        setTimeout(function() {
-          if ($(window).scrollTop() === 0 && $(document).height() > $(window).height()) {
-            // Nur wenn wir wirklich oben sind und es mehr Content gibt
-          }
-        }, 0);
-      }
+    // Verhindere automatisches Scrollen nach oben beim Laden (speziell für Hero-Sections)
+    var heroScrollPrevented = false;
+    $(document).on('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if ($(window).scrollTop() === 0 && initialScrollTop > 0 && !heroScrollPrevented) {
+          // Wenn wir plötzlich oben sind, war es wahrscheinlich automatisch
+          heroScrollPrevented = true;
+          // Verhindere automatisches Scrollen
+        }
+      }, 100);
     });
     
     // Verhindere automatisches Scrollen nach oben nach kurzer Zeit
     setTimeout(function() {
       preventAutoScroll = false;
-    }, 2000);
+    }, 3000);
   }
   
   // ESC Taste zum Schließen
