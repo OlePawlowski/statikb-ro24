@@ -182,7 +182,15 @@
     <!-- Home / Hero Section -->
     
     <main class="main">
-  
+      <iframe
+        class="frame"
+        src="https://drone-map-fdje.vercel.app/embed"
+        allow="fullscreen"
+        loading="lazy"
+        title="Statikbüro 3D Drohnen Tour"
+        allowfullscreen>
+      </iframe>
+      
       <!-- Scroll Indicator -->
       <a href="#about" class="scroll-down-indicator js-target-scroll">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1117,10 +1125,12 @@
 
 <script>
 $(document).ready(function() {
-  // Verhindere automatisches Scrollen beim Laden der Seite
-  if (window.location.hash === '' || window.location.hash === '#top') {
-    // Kein Hash vorhanden - verhindere Scrollen zum Anfang
-    $(window).scrollTop(0);
+  // Verhindere automatisches Scrollen beim Laden der Seite (nur Desktop)
+  if ($(window).width() > 991) {
+    if (window.location.hash === '' || window.location.hash === '#top') {
+      // Kein Hash vorhanden - verhindere Scrollen zum Anfang (nur Desktop)
+      $(window).scrollTop(0);
+    }
   }
   
   // Verhindere automatisches Scrollen bei Links ohne Hash

@@ -943,9 +943,11 @@ $(document).ready(function() {
     checkScroll();
   });
 
-  // Verhindere automatisches Scrollen beim Laden der Seite (außer bei spezifischen Hashes)
-  if (window.location.hash === '' || window.location.hash === '#top') {
-    $(window).scrollTop(0);
+  // Verhindere automatisches Scrollen beim Laden der Seite (nur Desktop)
+  if ($(window).width() > 991) {
+    if (window.location.hash === '' || window.location.hash === '#top') {
+      $(window).scrollTop(0);
+    }
   }
   
   // Scroll zu Projekt beim Laden der Seite, wenn Hash vorhanden ist (nur für Projekt-Hashes)

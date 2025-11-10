@@ -1264,9 +1264,11 @@
 
 <script>
 $(document).ready(function() {
-  // Verhindere automatisches Scrollen beim Laden der Seite
-  if (window.location.hash === '' || window.location.hash === '#top') {
-    $(window).scrollTop(0);
+  // Verhindere automatisches Scrollen beim Laden der Seite (nur Desktop)
+  if ($(window).width() > 991) {
+    if (window.location.hash === '' || window.location.hash === '#top') {
+      $(window).scrollTop(0);
+    }
   }
   
   // Verhindere automatisches Scrollen bei Links ohne Hash

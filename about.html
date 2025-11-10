@@ -662,13 +662,15 @@
 
 <script>
 $(document).ready(function() {
-  // Verhindere automatisches Scrollen beim Laden der Seite
-  if (window.location.hash === '' || window.location.hash === '#top') {
-    // Kein Hash vorhanden - verhindere Scrollen zum Anfang
-    $(window).scrollTop(0);
-    // Verhindere dass smoothscroll.js automatisch scrollt
-    if (typeof SmoothScroll !== 'undefined') {
-      // SmoothScroll deaktivieren für initiales Laden
+  // Verhindere automatisches Scrollen beim Laden der Seite (nur Desktop)
+  if ($(window).width() > 991) {
+    if (window.location.hash === '' || window.location.hash === '#top') {
+      // Kein Hash vorhanden - verhindere Scrollen zum Anfang (nur Desktop)
+      $(window).scrollTop(0);
+      // Verhindere dass smoothscroll.js automatisch scrollt
+      if (typeof SmoothScroll !== 'undefined') {
+        // SmoothScroll deaktivieren für initiales Laden
+      }
     }
   }
   
