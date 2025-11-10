@@ -1256,16 +1256,36 @@ $(document).ready(function() {
   
   // Verhindere automatisches Scrollen bei verschiedenen Events auf Mobile
   if ($(window).width() <= 991) {
+    // Verhindere automatisches Scrollen beim Laden der Seite komplett
+    var preventAutoScroll = true;
+    var lastScrollTop = $(window).scrollTop();
+    
     // Verhindere Scrollen beim Touch-Start
     var touchStartY = 0;
+    var touchStartTime = 0;
     $(document).on('touchstart', function(e) {
       touchStartY = e.originalEvent.touches[0].clientY;
+      touchStartTime = Date.now();
     });
     
     // Verhindere unerwartetes Scrollen
     $(document).on('touchmove', function(e) {
       // Erlaube normales Scrollen
       return true;
+    });
+    
+    // Verhindere automatisches Scrollen nach oben beim Laden
+    $(window).on('scroll', function() {
+      if (preventAutoScroll && $(window).scrollTop() === 0 && lastScrollTop > 0) {
+        // Wenn wir plötzlich oben sind, war es wahrscheinlich automatisch
+        setTimeout(function() {
+          if ($(window).scrollTop() === 0 && lastScrollTop > 0) {
+            // Verhindere automatisches Scrollen
+            preventAutoScroll = false;
+          }
+        }, 100);
+      }
+      lastScrollTop = $(window).scrollTop();
     });
     
     // Verhindere Scrollen beim Menü-Toggle
@@ -1277,6 +1297,57 @@ $(document).ready(function() {
           }
         }, 0);
       }
+    });
+    
+    // Verhindere automatisches Scrollen nach oben nach kurzer Zeit
+    setTimeout(function() {
+      preventAutoScroll = false;
+    }, 2000);
+  }
+  
+  // Iframe: Drohne nur bei Touch-and-Hold, nicht bei Swipe
+  if ($(window).width() <= 991) {
+    var iframeTouchStart = null;
+    var iframeTouchStartTime = 0;
+    var iframeTouchMoved = false;
+    var longPressThreshold = 500; // 500ms für Touch-and-Hold
+    
+    $('.main .frame').on('touchstart', function(e) {
+      iframeTouchStart = {
+        x: e.originalEvent.touches[0].clientX,
+        y: e.originalEvent.touches[0].clientY
+      };
+      iframeTouchStartTime = Date.now();
+      iframeTouchMoved = false;
+    });
+    
+    $('.main .frame').on('touchmove', function(e) {
+      if (iframeTouchStart) {
+        var currentX = e.originalEvent.touches[0].clientX;
+        var currentY = e.originalEvent.touches[0].clientY;
+        var deltaX = Math.abs(currentX - iframeTouchStart.x);
+        var deltaY = Math.abs(currentY - iframeTouchStart.y);
+        
+        // Wenn sich der Finger mehr als 10px bewegt hat, ist es ein Swipe
+        if (deltaX > 10 || deltaY > 10) {
+          iframeTouchMoved = true;
+          // Verhindere, dass der Swipe die Drohne steuert
+          e.stopPropagation();
+        }
+      }
+    });
+    
+    $('.main .frame').on('touchend', function(e) {
+      if (iframeTouchStart && !iframeTouchMoved) {
+        var touchDuration = Date.now() - iframeTouchStartTime;
+        // Wenn es kein Swipe war, aber auch kein langer Druck, verhindere es
+        if (touchDuration < longPressThreshold) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }
+      iframeTouchStart = null;
+      iframeTouchMoved = false;
     });
   }
 

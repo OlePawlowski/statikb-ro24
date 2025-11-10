@@ -1690,9 +1690,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
   
-  /* Smooth Scrolling für Mobile */
+  /* Verhindere smooth scrolling auf Mobile, um automatisches Scrollen zu vermeiden */
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important;
     -webkit-overflow-scrolling: touch;
   }
   

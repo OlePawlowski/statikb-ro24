@@ -986,7 +986,7 @@ label.error{
 /* Verhindere automatisches Scrollen nach oben auf Mobile */
 @media (max-width: 991px) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important; /* Verhindere smooth scrolling auf Mobile */
     -webkit-overflow-scrolling: touch;
   }
   
