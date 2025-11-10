@@ -1897,15 +1897,6 @@ label.error{
   z-index: 1;
 }
 
-/* Auf Mobile: Iframe-Höhe anpassen, damit man scrollen kann */
-@media (max-width: 991px) {
-  .main iframe,
-  .main .frame {
-    height: 100vh;
-    min-height: 100vh;
-    max-height: 100vh;
-  }
-}
 
 .main-inner{
   position: relative;

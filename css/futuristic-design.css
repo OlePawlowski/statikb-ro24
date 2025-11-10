@@ -415,6 +415,15 @@ textarea.form-control-enhanced:focus {
   background: transparent !important;
 }
 
+/* Auf Mobile: height entfernen, damit es nicht die Scrollleiste beeinflusst */
+@media (max-width: 991px) {
+  .header-home {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
 .header-home > * {
   pointer-events: auto !important;
 }
@@ -1175,8 +1184,9 @@ body::before {
   .main-hero-header,
   .main-projekte-header {
     min-height: 100vh;
-    height: auto !important;
-    max-height: none !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
   }
 }
 
@@ -1212,10 +1222,10 @@ body::before {
   .main-hero-header,
   .main-projekte-header {
     min-height: 100vh;
-    height: auto !important;
-    max-height: none !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
     padding: 0 1rem;
-    overflow: visible;
+    overflow: hidden !important;
   }
   
   .hero-title,
