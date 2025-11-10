@@ -136,6 +136,10 @@
 
 
     $('.js-target-scroll').on('click', function() {
+        // Verhindere automatisches Scrollen auf Mobile
+        if ($(window).width() <= 991) {
+            return true; // Erlaube normales Link-Verhalten auf Mobile
+        }
         var target = $(this.hash);
         if (target.length) {
             $('html,body').animate({

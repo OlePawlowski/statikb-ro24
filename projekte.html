@@ -831,7 +831,21 @@
 
 
 <script>
+// Deaktiviere Browser-eigene Scroll-Restoration auf Mobile
+if (window.history && window.history.scrollRestoration) {
+  if (window.innerWidth <= 991) {
+    window.history.scrollRestoration = 'manual';
+  }
+}
+
 $(document).ready(function() {
+  // Deaktiviere Browser-eigene Scroll-Restoration auf Mobile (erneut prüfen)
+  if (window.history && window.history.scrollRestoration) {
+    if ($(window).width() <= 991) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }
+  
   // Hamburger Menu Toggle
   var scrollPosition = 0;
   

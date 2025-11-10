@@ -1124,7 +1124,21 @@
 </style>
 
 <script>
+// Deaktiviere Browser-eigene Scroll-Restoration auf Mobile (sofort, bevor jQuery geladen ist)
+if (window.history && window.history.scrollRestoration) {
+  if (window.innerWidth <= 991) {
+    window.history.scrollRestoration = 'manual';
+  }
+}
+
 $(document).ready(function() {
+  // Deaktiviere Browser-eigene Scroll-Restoration auf Mobile (erneut prüfen)
+  if (window.history && window.history.scrollRestoration) {
+    if ($(window).width() <= 991) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }
+  
   // Verhindere automatisches Scrollen beim Laden der Seite (nur Desktop)
   if ($(window).width() > 991) {
     if (window.location.hash === '' || window.location.hash === '#top') {

@@ -613,13 +613,13 @@ textarea.form-control-enhanced:focus {
   .navbar-nav-mobile .active > a {
     background: rgba(255, 179, 68, 0.1) !important;
     color: #ffb344 !important;
-    text-shadow: 0 0 10px rgba(255, 179, 68, 0.5) !important;
+    text-shadow: 0 0 5px rgba(255, 179, 68, 0.3) !important;
     padding-left: 2rem !important;
   }
   
   .navbar-nav-mobile > .current > a {
     color: #ffb344 !important;
-    text-shadow: 0 0 10px rgba(255, 179, 68, 0.5) !important;
+    text-shadow: 0 0 5px rgba(255, 179, 68, 0.3) !important;
   }
   
   /* Mobile Header beim Scrollen (affix) im modernen Design */

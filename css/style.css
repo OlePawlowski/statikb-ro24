@@ -1822,7 +1822,7 @@ label.error{
 /* Scroll Indicator für Iframe */
 .scroll-down-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 60%;
   right: 40px;
   width: 50px;
   height: 50px;
