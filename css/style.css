@@ -1874,12 +1874,18 @@ label.error{
   position: relative;
   overflow: visible;
   min-height: 100vh;
+  height: 100vh;
 }
 
-/* Auf Mobile: height: 100vh entfernen, damit man scrollen kann */
+/* Auf Mobile: height: 100vh entfernen, damit man scrollen kann (außer auf index.html) */
 @media (max-width: 991px) {
   .main {
     height: auto !important;
+  }
+  
+  /* Auf index.html: height: 100vh beibehalten für Iframe */
+  body.home-page .main {
+    height: 100vh !important;
   }
 }
 
