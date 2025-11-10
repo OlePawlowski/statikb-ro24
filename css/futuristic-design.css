@@ -1170,6 +1170,16 @@ body::before {
   padding: 0;
 }
 
+/* Auf Mobile: height: 100vh entfernen, damit man scrollen kann */
+@media (max-width: 991px) {
+  .main-hero-header,
+  .main-projekte-header {
+    min-height: 100vh;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
 .hero-title,
 .projekte-hero-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -1202,7 +1212,10 @@ body::before {
   .main-hero-header,
   .main-projekte-header {
     min-height: 100vh;
+    height: auto !important;
+    max-height: none !important;
     padding: 0 1rem;
+    overflow: visible;
   }
   
   .hero-title,

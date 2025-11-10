@@ -1874,7 +1874,13 @@ label.error{
   position: relative;
   overflow: visible;
   min-height: 100vh;
-  height: 100vh;
+}
+
+/* Auf Mobile: height: 100vh entfernen, damit man scrollen kann */
+@media (max-width: 991px) {
+  .main {
+    height: auto !important;
+  }
 }
 
 /* Desktop: Iframe Styles */
@@ -1889,6 +1895,16 @@ label.error{
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+/* Auf Mobile: Iframe-Höhe anpassen, damit man scrollen kann */
+@media (max-width: 991px) {
+  .main iframe,
+  .main .frame {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .main-inner{
