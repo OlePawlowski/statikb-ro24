@@ -1876,3 +1876,140 @@ h1, h2, h3, h4, h5, h6 {
   }
   
 }
+
+/* === ENHANCED SCROLL ANIMATIONS FÜR UNTERSEITEN === */
+
+/* Scroll-Animate Basis-Styles */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Verschiedene Animation-Delays für mehr Bewegung */
+.scroll-animate:nth-child(1) { transition-delay: 0s; }
+.scroll-animate:nth-child(2) { transition-delay: 0.1s; }
+.scroll-animate:nth-child(3) { transition-delay: 0.2s; }
+.scroll-animate:nth-child(4) { transition-delay: 0.3s; }
+.scroll-animate:nth-child(5) { transition-delay: 0.4s; }
+
+/* Lazy Loading für Bilder */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+.lazy-load[loading="lazy"] {
+  opacity: 1; /* Native lazy loading unterstützt */
+}
+
+/* Parallax-Effekt für Bilder */
+.lazy-load {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Fade-In Animation für Sections */
+.about.section,
+.services.section,
+.clients.section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover-Effekte für Service Items */
+.service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Staggered Animation für Service Cards */
+.service-card-enhanced {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-card-enhanced.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image Overlay Animation */
+.image-overlay-wrapper {
+  overflow: hidden;
+}
+
+.image-overlay-wrapper img {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.image-overlay-wrapper:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Mobile Optimierungen für Animationen */
+@media (max-width: 991px) {
+  /* Reduziere Animationen auf Mobile für bessere Performance */
+  .scroll-animate {
+    transform: translateY(15px);
+    transition-duration: 0.4s;
+  }
+  
+  /* Deaktiviere Parallax auf Mobile */
+  .lazy-load {
+    transform: none !important;
+  }
+  
+  /* Reduziere Hover-Effekte auf Mobile */
+  .service-item:hover {
+    transform: none;
+  }
+}
+
+/* Vereinfachte Animationen für bessere Performance bei reduzierter Bewegung */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate,
+  .lazy-load,
+  .service-item {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Performance-Optimierungen */
+.scroll-animate,
+.lazy-load {
+  will-change: transform, opacity;
+}
+
+/* GPU-Beschleunigung für bessere Performance */
+.service-item,
+.image-overlay-wrapper {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

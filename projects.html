@@ -221,7 +221,7 @@
     
       <!-- Tragwerksplanung -->
 
-      <section id="tragwerksplanung" class="about section">
+      <section id="tragwerksplanung" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Tragwerksplanung</h2>
@@ -238,9 +238,9 @@
                   <p class="entry-text">Wir haben es uns zum Ziel gesetzt, bereits in der frühen Planungsphase wirtschaftliche und effiziente Tragwerke zu gestalten. Hierbei setzen wir auf zeitgemäße Planungsmethoden und die aktuellsten Softwaretechnologien.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/tragwerksplanung-bauantrag.jpg">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/tragwerksplanung-bauantrag.jpg" loading="lazy">
                 </div>
               </div>
             </div>
@@ -421,13 +421,15 @@
           }
         }
         
-        /* Verhindert weiteres Scrollen unter dem Footer */
+        /* Verhindert nur horizontales Scrollen */
         html, body {
           overflow-x: hidden;
+          overflow-y: auto !important; /* Normales vertikales Scrollen erlauben */
         }
         
         .layout {
           overflow-x: hidden;
+          overflow-y: visible !important; /* Scrollen erlauben */
         }
         
         .footer {
@@ -441,29 +443,18 @@
           padding-bottom: 0 !important;
         }
         
-        /* Entfernt überschüssigen Abstand nach dem Footer */
+        /* Content sollte scrollbar sein */
         .content {
-          padding-bottom: 0 !important;
+          padding-bottom: 2em !important;
           margin-bottom: 0 !important;
+          overflow-y: visible !important;
         }
         
-        /* Sicherstellen, dass nach dem Footer kein zusätzlicher Platz ist */
-        .layout > .content:last-child,
-        .layout > .content + .page-lines {
-          margin-bottom: 0 !important;
-        }
-        
-        /* Verhindert Scrolling über den Footer hinaus */
-        .footer::after {
-          content: '';
-          display: block;
-          height: 0;
-          visibility: hidden;
-        }
-        
-        /* Setzt maximale Höhe des Body auf den tatsächlichen Inhalt */
+        /* Body sollte normal scrollbar sein */
         body {
           position: relative;
+          overflow-y: auto !important;
+          height: auto !important;
         }
       </style>
       <!-- Enhanced Services Details -->
@@ -538,7 +529,7 @@
 
       <!-- Standsicherheitsnachweis -->
 
-      <section id="standsicherheitsnachweis" class="about section">
+      <section id="standsicherheitsnachweis" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Standsicherheits<br>-nachweis</h2>
@@ -554,9 +545,9 @@
                   <p class="entry-text">Ein Standsicherheitsnachweis ist ein wichtiger Bestandteil des Bauantrags und dokumentiert die statische Sicherheit Ihres Bauvorhabens.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="/img/bg/standardsicherheitsnachweis.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/standardsicherheitsnachweis.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -609,7 +600,7 @@
 
       <!-- Bauantrag -->
 
-      <section id="bauantrag" class="about section">
+      <section id="bauantrag" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Bauantrag</h2>
@@ -626,9 +617,9 @@
                   <p class="entry-text">Von der ersten Beratung bis zur finalen Baugenehmigung begleiten wir Sie durch den gesamten Prozess.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/bauantrag.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/bauantrag.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -681,7 +672,7 @@
 
       <!-- Bewehrungsplan -->
 
-      <section id="bewehrungsplan" class="about section">
+      <section id="bewehrungsplan" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Bewehrungsplan</h2>
@@ -697,9 +688,9 @@
                   <p class="entry-text">Detaillierte Bewehrungspläne sind essentiell für eine korrekte Umsetzung der statischen Berechnungen auf der Baustelle.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/bewehrungsplan.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/bewehrungsplan.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -752,7 +743,7 @@
 
       <!-- Brandschutznachweis -->
 
-      <section id="brandschutznachweis" class="about section">
+      <section id="brandschutznachweis" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Brandschutznachweis</h2>
@@ -768,9 +759,9 @@
                   <p class="entry-text">Ein Brandschutznachweis ist für viele Bauvorhaben gesetzlich vorgeschrieben und gewährleistet die Sicherheit der Gebäudenutzer.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/brandschutznachweis.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/brandschutznachweis.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -823,7 +814,7 @@
 
       <!-- Schallschutznachweis -->
 
-      <section id="schallschutznachweis" class="about section">
+      <section id="schallschutznachweis" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Schallschutznachweis</h2>
@@ -839,9 +830,9 @@
                   <p class="entry-text">Wir entwickeln individuelle Schallschutzkonzepte, die den gesetzlichen Anforderungen entsprechen und gleichzeitig wirtschaftlich umsetzbar sind.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/schallschutznachweis.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/schallschutznachweis.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -894,7 +885,7 @@
 
       <!-- Wärmeschutznachweis -->
 
-      <section id="wärmeschutznachweis" class="about section">
+      <section id="wärmeschutznachweis" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Wärmeschutznachweis</h2>
@@ -910,9 +901,9 @@
                   <p class="entry-text">Ein korrekter Wärmeschutznachweis ist essentiell für die Energieeffizienz Ihres Gebäudes und die Erfüllung der gesetzlichen Vorgaben.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/wärmeschutznachweis.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/wärmeschutznachweis.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -965,7 +956,7 @@
 
       <!-- Energieausweis -->
 
-      <section id="energieausweis" class="about section">
+      <section id="energieausweis" class="about section scroll-animate">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Energieausweis</h2>
@@ -981,9 +972,9 @@
                   <p class="entry-text">Ein Energieausweis ist nicht nur gesetzlich vorgeschrieben, sondern auch ein wichtiges Marketinginstrument für Verkauf oder Vermietung.</p>
                 </div>
               </div>
-              <div class="col-base col-sm-6 col-md-4">
+              <div class="col-base col-sm-6 col-md-4 scroll-animate">
                 <div class="image-overlay-wrapper">
-                  <img alt="" class="img-responsive" src="img/bg/energieausweis.webp">
+                  <img alt="" class="img-responsive lazy-load" src="img/bg/energieausweis.webp" loading="lazy">
                 </div>
               </div>
             </div>
@@ -1318,7 +1309,7 @@ $(document).ready(function() {
     }
   });
 
-  // Scroll Animation
+  // Enhanced Scroll Animation mit mehr Bewegung
   function checkScroll() {
     $('.scroll-animate').each(function() {
       var elementTop = $(this).offset().top;
@@ -1330,10 +1321,69 @@ $(document).ready(function() {
         $(this).addClass('animate');
       }
     });
+    
+    // Parallax-Effekt für Bilder (nur Desktop)
+    if ($(window).width() > 991) {
+      $('.lazy-load').each(function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        
+        if (elementBottom > viewportTop && elementTop < viewportBottom) {
+          var scrolled = $(window).scrollTop();
+          var parallax = (scrolled - elementTop) * 0.1;
+          $(this).css('transform', 'translateY(' + parallax + 'px)');
+        }
+      });
+    }
+    
+    // Service Cards Animation
+    $('.service-card-enhanced').each(function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        $(this).addClass('animate');
+      }
+    });
   }
 
-  $(window).on('scroll', checkScroll);
+  // Throttle scroll events für bessere Performance
+  var scrollTimeout;
+  $(window).on('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(checkScroll);
+  });
   checkScroll(); // Check on load
+  
+  // Lazy Loading für Bilder
+  if ('IntersectionObserver' in window) {
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          } else {
+            img.classList.add('loaded');
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px' // Lade Bilder 50px bevor sie sichtbar werden
+    });
+    
+    document.querySelectorAll('.lazy-load').forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
 
   // Initialize WOW.js
   new WOW().init();
@@ -1348,19 +1398,7 @@ $(document).ready(function() {
     }
   );
   
-  // Verhindert Scrolling über den Footer hinaus
-  $(window).on('scroll', function() {
-    var footer = $('#footer');
-    if (footer.length) {
-      var footerBottom = footer.offset().top + footer.outerHeight();
-      var windowBottom = $(window).scrollTop() + $(window).height();
-      
-      // Wenn wir über den Footer hinaus scrollen, stoppen wir das Scrolling
-      if (windowBottom > footerBottom) {
-        $('html, body').scrollTop(footerBottom - $(window).height());
-      }
-    }
-  });
+  // Entfernt - zu aggressive Scroll-Verhinderung blockierte normales Scrollen
 
   // Hamburger Menu Toggle
   var scrollPosition = 0;

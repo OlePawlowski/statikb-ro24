@@ -199,7 +199,12 @@
           </div>
         </nav> 
       </header>
-      
+
+  <!-- Layout -->
+
+  <div class="layout">
+    
+    <main class="main">
       <!-- Hero Content -->
       <div class="container">
         <div class="main-hero-header">
@@ -255,9 +260,9 @@
                
               </div>
               <div class="clearfix visible-sm"></div>
-              <div class="col-base col-about-img col-sm-6 col-md-4" style="filter: brightness(50%); /* Verringert die Helligkeit auf 50% */
+              <div class="col-base col-about-img col-sm-6 col-md-4 scroll-animate" style="filter: brightness(50%); /* Verringert die Helligkeit auf 50% */
     transition: filter 0.3s ease;">
-                <img alt="" class="img-responsive" src="img/bg/380x370.jpg">
+                <img alt="" class="img-responsive lazy-load" src="img/bg/380x370.jpg" loading="lazy">
             
               </div>
             </div>
@@ -700,7 +705,7 @@ $(document).ready(function() {
     $(this).next('.faq-answer-enhanced').toggleClass('active');
   });
   
-  // Scroll Animation
+  // Enhanced Scroll Animation mit mehr Bewegung
   function checkScroll() {
     $('.scroll-animate').each(function() {
       var elementTop = $(this).offset().top;
@@ -712,10 +717,51 @@ $(document).ready(function() {
         $(this).addClass('animate');
       }
     });
+    
+    // Parallax-Effekt für Bilder
+    $('.lazy-load').each(function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        var scrolled = $(window).scrollTop();
+        var parallax = (scrolled - elementTop) * 0.1;
+        $(this).css('transform', 'translateY(' + parallax + 'px)');
+      }
+    });
   }
 
-  $(window).on('scroll', checkScroll);
+  // Throttle scroll events für bessere Performance
+  var scrollTimeout;
+  $(window).on('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(checkScroll);
+  });
   checkScroll(); // Check on load
+  
+  // Lazy Loading für Bilder
+  if ('IntersectionObserver' in window) {
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          }
+        }
+      });
+    });
+    
+    document.querySelectorAll('.lazy-load').forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
 
   // Enhanced Service Card Animations
   $('.service-card-enhanced').hover(

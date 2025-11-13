@@ -500,7 +500,7 @@ $(document).ready(function() {
     }
   });
   
-  // Scroll Animation - Stelle sicher, dass contact-enhanced sichtbar ist
+  // Enhanced Scroll Animation mit mehr Bewegung
   function checkScroll() {
     $('.scroll-animate').each(function() {
       var elementTop = $(this).offset().top;
@@ -512,17 +512,41 @@ $(document).ready(function() {
         $(this).addClass('animate');
       }
     });
-    
-    // Stelle sicher, dass contact-enhanced immer sichtbar ist
-    $('.contact-enhanced').css({
-      'display': 'block',
-      'visibility': 'visible',
-      'opacity': '1'
-    });
   }
 
-  $(window).on('scroll', checkScroll);
+  // Throttle scroll events für bessere Performance
+  var scrollTimeout;
+  $(window).on('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(checkScroll);
+  });
   checkScroll(); // Check on load
+  
+  // Lazy Loading für Bilder
+  if ('IntersectionObserver' in window) {
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          } else {
+            img.classList.add('loaded');
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px'
+    });
+    
+    document.querySelectorAll('.lazy-load').forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
   
   // Stelle sicher, dass das Formular sofort sichtbar ist
   setTimeout(function() {
